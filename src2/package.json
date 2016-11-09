@@ -1,0 +1,101 @@
+{
+  "name": "lunch-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "better-npm-run build:dev",
+    "build:prod": "better-npm-run build:prod",
+    "test": "better-npm-run test",
+    "lint": "",
+    "start": "node server.js --config --progress",
+    "analyze": "better-npm-run analyze"
+  },
+  "betterScripts": {
+    "build:dev": {
+      "command": "webpack-dev-server --config --progress",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build:prod": {
+      "command": "webpack --config --colors --progress",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "test": {
+      "command": "karma start",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "analyze": {
+      "command": "mkdirp reports && webpack --json -profile > reports/webpack-stats.json",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "private": "true",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "autoprefixer": "^6.5.1",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "better-npm-run": "0.0.13",
+    "clean-webpack-plugin": "^0.1.13",
+    "copy-webpack-plugin": "^4.0.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.9.0",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-angular": "^1.4.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.24.1",
+    "istanbul-instrumenter-loader": "^1.0.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.8.0",
+    "ng-annotate-loader": "^0.2.0",
+    "node-sass": "^3.10.1",
+    "open": "0.0.5",
+    "postcss": "^5.2.5",
+    "postcss-loader": "^1.1.0",
+    "pre-git": "^3.10.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^0.15.0",
+    "webpack-validator": "^2.2.9"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap-sass": "^3.3.7"
+  },
+  "config": {
+    "pre-git": {
+      "msg-pattern": "^feature\\-\\d{1,4}\\:.+",
+      "pre-commit": [
+        "npm run lint"
+      ]
+    }
+  }
+}
