@@ -14,7 +14,7 @@ const config = {
     devtool: 'inline-source-map',
     watch: true,
     entry: [
-        'webpack-dev-server/client?' + host,
+        //'webpack-dev-server/client?' + host,
         'webpack/hot/only-dev-server',
         cfg.paths.entry
     ],

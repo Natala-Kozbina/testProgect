@@ -55,7 +55,7 @@ const config = merge({
                 loader: 'url?limit=10000&mimetype=application/font-woff&name=' + cfg.paths.fonts + '/[name].[ext]'
             },
             {
-                test: /\.(png|jpe?g|gif]svg)$/,
+                test: /\.(png|jpe?g|gif)$/,
                 loader: 'url?name=' + cfg.paths.img + '/[name].[ext]'
             },
             {

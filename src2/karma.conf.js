@@ -1,4 +1,5 @@
 const cfg = require('./config/base.js');
+const src = cfg.paths.src;
 
 module.exports = function (config) {
     config.set({
@@ -8,9 +9,11 @@ module.exports = function (config) {
         frameworks: ['jasmine'],
         files: [
             './node_modules/babel-polyfill/dist/polyfill.js',
-            //'config/webpack/webpack.test.js'
-            //'./src/app/**/*.spec.js',
-            './src/app/**/*.js'
+            {
+                pattern: 'config/webpack/webpack.test.js',
+                watched: false
+            },
+            //'./src/app/**/*.js'
         ],
         exclude: [
             './src/spp/assets/uui/**/*.js'
@@ -24,8 +27,8 @@ module.exports = function (config) {
             'karma-spec-reporter',
         ],
         preprocessors: {
-            './src/app/**/*.js': [ 'webpack', 'sourcemap', 'coverage' ]
-            //'config/webpack/webpack.test.js': [ 'webpack', 'sourcemap' ]
+              //'./src/app/**/*.js': [ 'webpack', 'sourcemap', 'coverage'],
+            'config/webpack/webpack.test.js': ['webpack', 'sourcemap']
         },
         reporters: ['spec', 'coverage'],
         coverageReporter: {
@@ -34,26 +37,39 @@ module.exports = function (config) {
         },
         webpack: {
             module: {
-                preLoaders: [{
-                    test: /\.js?$/,
-                    exclude: /(node_modules|\.spec\.js$)/,
-                    loader: 'istanbul-instrumenter'
-                }],
-                loaders: [
+                preLoaders: [
+                    { test: /\.js$/,
+                      include: src,
+                      exclude: /node_modules/,
+                      loaders: ['isparta']
+                    },
+                    {
+                        test: /\.js$/,
+                        include: src,
+                        exclude: /node_modules/,
+                        loaders: ['ng-annotate', 'babel?extends=' + cfg.babel.configFile]
+                    }
+                ],
+                /*loaders: [
                     {
                         test: /\.js?$/,
                         exclude: /node_modules/,
                           loaders: ['ng-annotate', 'babel?extends=' + cfg.babel.configFile]
                     }
-                ]
+                ],*/
+                postLoaders: [{
+                    test: /\.js?$/,
+                    exclude: /(node_modules|\.spec\.js$)/,
+                    loader: 'istanbul-instrumenter',
+                    query: {
+                        esModules: true
+                    }
+                }]
             },
             watch: true
         },
-        /*webpackServer: {
-            noInfo: true
-        },*/
-        webpackMiddleware: {
-          //  stats: 'errors-only'
+        webpackServer: {
+            //noInfo: true
         }
     });
 }

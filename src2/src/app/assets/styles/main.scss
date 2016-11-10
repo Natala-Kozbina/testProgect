@@ -4,19 +4,17 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-  position: relative;
+.main-container {
   min-height: 100%;
+  margin-bottom: -60px;
+  padding-bottom: 60px;
+  height: auto;
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
+
+.main-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
 }
