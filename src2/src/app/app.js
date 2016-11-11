@@ -3,6 +3,7 @@ import './assets/styles/main.scss';
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-messages';
+import 'angular-animate';
 
 import accordion from 'angular-ui-bootstrap/src/accordion';
 import datepicker from 'angular-ui-bootstrap/src/datepicker';
@@ -18,6 +19,7 @@ angular
     .module('lunchTimer', [
         'ui.router',
         'ngMessages',
+        'ngAnimate',
         accordion,
         datepicker,
         ComponentsModule,
