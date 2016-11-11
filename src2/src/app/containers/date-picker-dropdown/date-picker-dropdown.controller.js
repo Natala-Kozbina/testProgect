@@ -11,11 +11,9 @@ class DatePickerDropdownController {
     setRange() {
         for(let i = 1; i <= 7; i++) {
             let date = new Date();
-            console.log('date.getDate() + i',date.getDate() + i);
             date.setDate(date.getDate() + i);
             this.range.push(date);
         }
-        console.log(this.range);
     }
 
     setCurrentValue(value) {
