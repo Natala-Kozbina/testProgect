@@ -5,9 +5,6 @@ import 'angular-ui-router';
 import 'angular-messages';
 import 'angular-animate';
 
-import accordion from 'angular-ui-bootstrap/src/accordion';
-import datepicker from 'angular-ui-bootstrap/src/datepicker';
-
 import routerConfig from './app.routes';
 
 import ComponentsModule from './components/components.module';
