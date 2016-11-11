@@ -3,7 +3,7 @@
         <span> Sign in </span>
     </h1>
 
-    <div class="form">
+    <div class="form" ng-submit=$ctrl.redirect()>
         <form>
             <input name="email" placeholder="user_name@epam.com" class="login-form-input" required autofocus text-only />
             <input name="password" placeholder="password" class="login-form-input" required text-only />
