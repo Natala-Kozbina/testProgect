@@ -10,7 +10,7 @@ const FooterAppComponent = {
                     <p class="copyright">© 2016 EPAM Systems. All Rights Reserved.</p>
                 </div>
                 <div class="footer-build">
-                    <p class="build">Build version v <span>2.0.0.1</span></p>
+                    <p class="build">Build version v <span>1.0.0.0</span></p>
                 </div>
             </div>
         </footer>
