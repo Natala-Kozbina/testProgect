@@ -1,7 +1,9 @@
+import './footer.scss';
+
 const FooterAppComponent = {
     bindings: {},
     template: `
-        <footer class="footer">
+        <footer class="footer b-footer">
             <div class="uui-footer clearfix">
                 <div class="footer-logo-copyright">
                     <div class="epam-logo">
