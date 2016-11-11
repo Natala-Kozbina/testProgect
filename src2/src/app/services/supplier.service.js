@@ -5,20 +5,20 @@ class SupplierService {
                 name: 'Supplier 1',
                 data : [
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25"
                     }
@@ -28,26 +28,26 @@ class SupplierService {
                 name: 'Supplier 2',
                 data : [
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50"
                     }
@@ -57,34 +57,34 @@ class SupplierService {
                 name: 'Supplier 3',
                 data : [
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
                         likes: "10"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "10"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "10"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "10"
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "10"
                     }
                 ]
             }
