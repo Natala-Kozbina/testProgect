@@ -7,7 +7,7 @@ const ContainerModule = angular
     .module('lunchTimer.containers', [
         LoginComponent.name,
         LoginFormComponent.name,
-        RegistrationFormComponent.name,
+        RegistrationFormComponent.name
 ]);
 
 export default ContainerModule.name;

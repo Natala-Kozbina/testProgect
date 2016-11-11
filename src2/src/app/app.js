@@ -17,8 +17,6 @@ angular
         'ui.router',
         'ngMessages',
         'ngAnimate',
-        accordion,
-        datepicker,
         ComponentsModule,
         ContainersModule
     ])

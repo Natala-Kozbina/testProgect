@@ -7,7 +7,7 @@ import MenuTileModule from './menu-tile/menu-tile.module';
 const ComponentsModule = angular
     .module('lunchTimer.components', [
         TestModule.name,
-        AccordionModule.name
+        AccordionModule.name,
         MenuListModule.name,
         MenuTileModule.name
     ]);
