@@ -1,0 +1,108 @@
+<header class="b-header">
+    <div class="uui-header navigation-header">
+        <nav>
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box" ng-click="$ctrl.showMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu" ng-class="{'show': $ctrl.show}" ng-click="$ctrl.hideMenu()">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="#" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                                <span class="logo">
+                                     <img src="../../assets/img/EPM_LunchT_Logo.png" alt="" />
+                                </span>
+                        <span class="title">LUNCHTIMER</span>
+                    </a>
+                </div>
+                <div class="responsive-menu" ng-class="{'b-header_show-element': $ctrl.show}">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <date-picker-dropdown></date-picker-dropdown>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Баланс: 300 грн</a></li>
+                                <li><a href="#"><div class="fa fa-shopping-cart"></div></a></li>
+
+                                <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
+                                    <a href="#" class="dropdown-toggle b-header__user" data-toggle="dropdown" uib-dropdown-toggle>
+                                        <div class="b-header__user-photo">
+                                            <img src="https://static.cdn.epam.com/avatar/82bbd81fa6738c0f721c778a46e8a1d6.jpg" alt="">
+                                        </div>
+                                        <span>Luke Skywalker</span>
+                                        <span class="arrow fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu b-header__dropdown-menu" role="menu" uib-dropdown-menu>
+                                        <li class="text-center"><a href="#">Admin</a></li>
+                                        <li class="text-center"><a href="#">Profile</a></li>
+                                        <li class="text-center"><a href="#">Order history</a></li>
+                                        <li class="text-center"><a href="#">Settings</a></li>
+                                        <li class="text-center">
+                                            <a href="#">
+                                                <i class="fa fa-power-off"></i>
+                                                Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <a href="#" class="brand-logo">
+                        <span class="logo">
+                            <img src="../../assets/img/EPM_LunchT_Logo.png" alt="" />
+                        </span>
+                LUNCHTIMER
+            </a>
+
+            <date-picker-dropdown></date-picker-dropdown>
+
+            <ul class="uui-navigation nav navbar-nav navbar-right">
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Баланс: 300 грн</a></li>
+                <li><a href="#"><div class="fa fa-shopping-cart"></div></a></li>
+                <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
+                    <a href="#" class="dropdown-toggle b-header__user" data-toggle="dropdown" uib-dropdown-toggle>
+                        <div class="b-header__user-photo">
+                            <img src="https://static.cdn.epam.com/avatar/82bbd81fa6738c0f721c778a46e8a1d6.jpg" alt="">
+                        </div>
+                        <span>Luke Skywalker</span>
+                        <span class="arrow fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu b-header__dropdown-menu" role="menu" uib-dropdown-menu>
+                        <li class="text-center"><a href="#">Admin</a></li>
+                        <li class="text-center"><a href="#">Profile</a></li>
+                        <li class="text-center"><a href="#">Order history</a></li>
+                        <li class="text-center"><a href="#">Settings</a></li>
+                        <li class="text-center">
+                            <a href="#">
+                                <i class="fa fa-power-off"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+
+
+
+        </nav>
+    </div>
+</header>
