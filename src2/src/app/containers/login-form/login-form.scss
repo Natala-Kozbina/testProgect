@@ -3,6 +3,7 @@
     // height: 80%;
     background-color: rgba(233, 235, 232, 0.95);
     padding-top: 3%;
+    padding-top: 35px;
 }
 
 .form {
@@ -21,11 +22,21 @@
     padding-left: 3%;
 }
 
-.login-form-button {
+
+.login-form-button{
     width: 350px;
     background-color: #a3c644;
     color: white;
     text-transform: uppercase;
+}
+
+.login-form-button-wrapper {
+    width: 350px;
+    background-color: #a3c644;
+    color: white;
+    text-transform: uppercase;
+    // margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .page-title {
@@ -77,4 +88,11 @@
 
 .forgotten-password-button  {
     margin-left: 40px;
+}
+
+.login-button-wrapper {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-top: 25px;
+        padding-bottom: 35px;
 }
