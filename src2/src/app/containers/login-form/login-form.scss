@@ -9,29 +9,31 @@
 .form {
     // width: 98%;
     padding: 0 35px;
+    margin-top: 25px;
     // padding-bottom: 30px;
     // margin-bottom: 50px;
 }
 
 .login-form-input {
-    width: 98%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     // margin-bottom: 4%;
     border-color: none;
     padding-left: 3%;
 }
 
-
 .login-form-button{
-    width: 350px;
+    width: 100%;
+    text-align: center;
     background-color: #a3c644;
     color: white;
     text-transform: uppercase;
 }
 
 .login-form-button-wrapper {
-    width: 350px;
+    // margin-left: 35px;
+    // margin-right: 35px;
     background-color: #a3c644;
     color: white;
     text-transform: uppercase;
@@ -40,39 +42,13 @@
 }
 
 .page-title {
-    color: red;
-    width: 430px;
-    margin: 0 auto 30px auto;
+    width: 75%;
+    margin: 5% auto;
 }
-// .fancy {
-//     line-height: 0.5;
-//     text-align: center;
-//     color: #999999;
-// }
-// .fancy span {
-//     display: inline-block;
-//     position: relative;
-// }
-// .fancy span:before,
-// .fancy span:after {
-//     content: "";
-//     position: absolute;
-//     height: 7px;
-//     border-bottom: 1px solid #999999;
-//     top: 0;
-//     width: 30px;
-// }
-// .fancy span:before {
-//     right: 100%;
-//     margin-right: 15px;
-// // }
-// .fancy span:after {
-//     left: 100%;
-//     margin-left: 15px;
-// }
 
 .registration-form-button {
-    margin-left: 9%;
+    // margin-left: 9%;
+    text-align: center;
 }
 
 .uui-button.transparent.forgotten-password-button  {
@@ -87,12 +63,14 @@
 }
 
 .forgotten-password-button  {
-    margin-left: 40px;
+    // margin-left: 40px;
+    // text-align: center;
 }
 
 .login-button-wrapper {
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding-top: 25px;
-        padding-bottom: 35px;
+    padding: 0 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 35px;
 }
