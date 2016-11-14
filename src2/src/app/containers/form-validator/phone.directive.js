@@ -10,7 +10,7 @@ class Phone {
     // require: 'ngModel',// что б у элемента к которорму применяетмя деректова была модель
     link($scope, $element, $attrs, $ctrl) {
 
-        $ctrl.$validators.phone = function(modelValue, viewValue) {
+        $ctrl.$validators.phone = function(modelValue) {
             var reg = /^\+38-[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
                 if (reg.test(modelValue)) {
                         return true;

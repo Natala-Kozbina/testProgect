@@ -1,35 +1,30 @@
 .registration-form {
-    width: 430px;
-    height: 550px;
     background-color: rgba(233, 235, 232, 0.95);
-    padding-top: 30px;
+    padding-top: 3%;
 }
 
 .registration_form-form {
-    width: 350px;
-    margin-left: 40px;
-    padding-bottom: 30px;
+    padding: 0 35px;
 }
 
 .registration-form-input {
-    width: 350px;
-    height: 35px;
-    margin-bottom: 10px;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     border-color: none;
-    padding-left: 10px;
+    padding-left: 3%;
 }
 
 .registration_form-button-wrapper {
-    width: 350px;
-    background-color: #a3c644;
+    width: 100%;
     color: white;
     text-transform: uppercase;
-    // margin-top: 35px;
+    margin-bottom: 2%;
 }
 
 .registration-page-title {
-    width: 430px;
-    margin: 0 auto 30px auto;
+    width: 75%;
+    margin: 5% auto;
 }
 .fancy {
     line-height: 0.5;
@@ -59,7 +54,16 @@
 }
 
 .registration_form-login-button {
-    margin-left: 40px;
+    margin-left: 9%;
+}
+
+.registration-SingIn-button {
+    padding: 0 35px 20px;
+}
+
+.registration_form-SingIn-button {
+    margin: auto;
+    width: 100%;
 }
 
 .uui-button.transparent.forgotten-password-button  {
@@ -73,10 +77,6 @@
     color: #464547;
 }
 
-.forgotten-password-button  {
-    margin-left: 40px;
-}
-
 .greenColor {
     border: solid 2px #7F993A;
     color: #7F993A;
@@ -84,9 +84,19 @@
 
 .redColorText {
     color: #8E244D;
+    padding: 0px;
+    margin:0
 }
 
 .redColor {
     border: solid 2px #8E244D;
     color: #8E244D;
+}
+
+.form-width {
+    height: 40px;
+}
+
+.form-group.form-width {
+    height: 40px;
 }

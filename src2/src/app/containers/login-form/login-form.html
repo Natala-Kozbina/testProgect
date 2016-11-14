@@ -5,15 +5,23 @@
 
     <div class="form" ng-submit=$ctrl.redirect()>
         <form>
-            <input name="email" placeholder="user_name@epam.com" class="login-form-input" required autofocus/>
-            <input name="password" placeholder="password" class="login-form-input" required/>
-            <div class="login-form-button">
-                <button type="submit" class="btn login-form-button uui-button large lime-green"> Sign in </button>
+            <div class="form-group form-width">
+                <input name="email" placeholder="user_name@epam.com" class="login-form-input" required autofocus />
+            </div>
+            <div class="form-group form-width">
+                <input name="password" placeholder="password" class="login-form-input" required />
+            </div>
+            <div class="login-form-button-wrapper">
+                <button type="submit" class="btn login-form-button  uui-button large lime-green"> Sign in </button>
             </div>
         </form>
     </div>
 
-    <div class="epam-login">
+    <p class="registration-page-title fancy">
+        <span> or </span>
+    </p>
+
+    <div class="epam-login login-button-wrapper clearfix">
 
             <a class=" uui-button   transparent forgotten-password-button">
                 Forgotten Password
