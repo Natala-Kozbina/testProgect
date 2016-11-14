@@ -1,8 +1,10 @@
 .b-header {
-  height: 60px;
-  background-color: #464547;
   &__navigation {
-    float: right;
+    height: 60px;
+    background-color: #464547;
+    &__navigation {
+      float: right;
+    }
   }
 
   &__landing-header {

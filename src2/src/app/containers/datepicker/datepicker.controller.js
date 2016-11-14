@@ -11,7 +11,7 @@ class DatepickerController {
     open() {
         console.log('open');
         this.opened = true;
-    };
+    }
 }
 
 export default DatepickerController;

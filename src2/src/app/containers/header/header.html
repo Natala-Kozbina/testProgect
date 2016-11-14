@@ -1,10 +1,12 @@
 <header>
     <div class="b-header">
-        <menu-toggle menu-showed="$ctrl.menuShowed" toggle-menu="$ctrl.toggleMenu()"></menu-toggle>
-        <logo></logo>
-        <app-datepicker menu-showed="$ctrl.menuShowed" toggle-menu="$ctrl.toggleMenu()"></app-datepicker>
-        <top-navigation menu-showed="$ctrl.menuShowed" toggle-menu="$ctrl.toggleMenu()" class="b-header__navigation">
-        </top-navigation>
+        <div class="b-header__navigation">
+            <menu-toggle menu-showed="$ctrl.menuShowed" toggle-menu="$ctrl.toggleMenu()"></menu-toggle>
+            <logo></logo>
+            <app-datepicker menu-showed="$ctrl.menuShowed" toggle-menu="$ctrl.toggleMenu()"></app-datepicker>
+            <top-navigation menu-showed="$ctrl.menuShowed" toggle-menu="$ctrl.toggleMenu()" class="b-header__navigation">
+            </top-navigation>
+        </div>
         <div class="b-header__landing-header">
             <div class="b-header__landing-title">Menu</div>
         </div>
