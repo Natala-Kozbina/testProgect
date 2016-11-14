@@ -1,0 +1,44 @@
+.icon-like {
+  display: block;
+  width: 13px;
+  height: 12px;
+  background: url('../../assets/img/icons/icon-like.png') no-repeat;
+}
+
+.icon-megaphone {
+  display: block;
+  width: 20px;
+  height: 21px;
+  background: url('../../assets/img/icons/icon-megaphone.png') no-repeat;
+}
+
+.icon-prime {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url('../../assets/img/icons/icon-prime.png') no-repeat;
+}
+
+.menu-tile-label {
+    position: absolute;
+    top: -6px;
+    left: 22px;
+    z-index: 2;
+    background: url('../../assets/img/menu/menu-tile-label.png') no-repeat;
+    width: 35px;
+    height: 46px;
+}
+
+.menu-tile-likes {
+
+    &__counter {
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        margin: 5px 0 0 0;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+    }
+}
