@@ -3,6 +3,7 @@ import './assets/styles/main.scss';
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-messages';
+import 'angular-animate';
 
 import routerConfig from './app.routes';
 
@@ -15,6 +16,7 @@ angular
     .module('lunchTimer', [
         'ui.router',
         'ngMessages',
+        'ngAnimate',
         ComponentsModule,
         ContainersModule
     ])
