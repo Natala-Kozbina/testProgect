@@ -9,6 +9,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -35,6 +36,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -55,6 +57,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25",
+                        labelType: "likes",
                         comments: []
                     }
                 ]
@@ -67,6 +70,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -93,6 +97,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -113,6 +118,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -139,6 +145,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "16.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -170,6 +177,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "18.00грн",
                         likes: "10",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -196,6 +204,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "18.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -222,6 +231,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "18.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -248,6 +258,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "18.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",
@@ -274,6 +285,7 @@ class SupplierService {
                         description: "Чизкейк со смородиной",
                         price: "18.00грн",
                         likes: "50",
+                        labelType: "likes",
                         comments: [
                           {
                             name: "Luke Skyworker",

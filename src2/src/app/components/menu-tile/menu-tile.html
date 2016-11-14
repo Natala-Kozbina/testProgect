@@ -1,16 +1,7 @@
 <div class="menu-tile">
   <div class="menu-tile-dish" ng-show="$ctrl.displayDish">
 
-    <div class="menu-tile-dish__label">
-      <div class="menu-tile-likes">
-        <div class="menu-tile-likes__counter">
-          {{$ctrl.dishData.likes}}
-        </div>
-        <div class="menu-tile-likes__icon">
-          <span class="icon-like"></span>
-        </div>
-      </div>
-    </div>
+    <menu-tile-label label-type="$ctrl.dishData.labelType" dish-data="$ctrl.dishData"></menu-tile-label>
 
     <div class="menu-tile-dish__header clearfix">
         <div class="menu-tile-link menu-tile-link--comments">

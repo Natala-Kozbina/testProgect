@@ -1,0 +1,24 @@
+<div class="menu-tile-label">
+
+  <div class="menu-tile-likes" ng-if="$ctrl.labelType === 'likes'">
+    <div class="menu-tile-likes__counter">
+      {{$ctrl.dishData.likes}}
+    </div>
+    <div class="menu-tile-likes__icon">
+      <span class="icon-like"></span>
+    </div>
+  </div>
+
+  <div class="menu-tile-megaphone" ng-if="$ctrl.type === 'megaphone'">
+    <div class="menu-tile-likes__icon">
+      <span class="icon-megaphone"></span>
+    </div>
+  </div>
+
+  <div class="menu-tile-prime" ng-if="$ctrl.type === 'prime'">
+    <div class="menu-tile-likes__icon">
+      <span class="icon-prime"></span>
+    </div>
+  </div>
+
+</div>
