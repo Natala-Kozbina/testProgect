@@ -10,7 +10,7 @@ class Email {
     // require: 'ngModel',// что б у элемента к которорму применяетмя деректова была модель
     link($scope, $element, $attrs, $ctrl) {
 
-        $ctrl.$validators.email = function(modelValue, viewValue) {
+        $ctrl.$validators.email = function(modelValue) {
                     var reg = /^[a-z]{1,}@[a-z]{1,}\.[a-z]{2,}$/;
                     if (reg.test(modelValue)) {
                         return true;

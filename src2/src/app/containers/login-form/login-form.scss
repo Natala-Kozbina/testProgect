@@ -55,3 +55,16 @@
 .login-button-wrapper {
     padding:35px;
 }
+
+@media screen and (max-width: 576px) {
+    .login-button-wrapper {
+        text-align: center;
+    }
+
+    .registration-form-button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        float: none;
+    }
+
+}
