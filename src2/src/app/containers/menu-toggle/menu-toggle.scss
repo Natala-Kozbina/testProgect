@@ -1,0 +1,19 @@
+.b__menu-toggle {
+  display: none;
+  float: right;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  &:hover {
+    background: #333;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .b__menu-toggle {
+    display: block;
+  }
+}

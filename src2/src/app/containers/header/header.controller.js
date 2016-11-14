@@ -3,16 +3,11 @@ class HeaderController {
     }
 
     $onInit() {
-        this.show = false;
-        this.testTitle = 'testTitle';
+        this.menuShowed = false;
     }
 
-    showMenu() {
-        this.show = true;
-    }
-
-    hideMenu() {
-        this.show = false;
+    toggleMenu() {
+        this.menuShowed = !this.menuShowed;
     }
 }
 
