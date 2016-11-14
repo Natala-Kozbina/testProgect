@@ -3,7 +3,7 @@
         <span> Sign in </span>
     </h1>
 
-    <div class="form" ng-submit=$ctrl.redirect()>
+    <div class="form" ng-submit=$ctrl.redirect("home")>
         <form>
             <div class="form-group form-width">
                 <input name="email" placeholder="user_name@epam.com" class="login-form-input" required autofocus />
@@ -27,10 +27,8 @@
                 Forgotten Password
             </a>
 
-        <button class="uui-button  dark-gray registration-form-button">
-            <i class="fa fa-angle-left"></i>
+        <button class="uui-button  dark-gray registration-form-button" ng-click=$ctrl.redirect("registration")>
             Registration
-            <i class="fa fa-angle-right"></i>
         </button>
     </div>
 </div>

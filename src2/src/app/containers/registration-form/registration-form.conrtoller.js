@@ -1,6 +1,10 @@
 class RegistrationFormController {
-    constructor() {
+    constructor($state) {
         "ngInject";
+        this.state = $state;
+    }
+    redirect (state) {
+      this.state.go(state);
     }
 }
 
