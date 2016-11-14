@@ -1,11 +1,11 @@
 class LoginFormController {
-    constructor ($location) {
+    constructor ($state) {
         "ngInject";
-        this.location = $location;
+        this.state = $state;
     }
 
-    redirect () {
-      this.location.url('/home');
+    redirect (state) {
+      this.state.go(state);
     }
 }
 
