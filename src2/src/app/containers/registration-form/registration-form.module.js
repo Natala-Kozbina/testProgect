@@ -1,7 +1,7 @@
 import angular from 'angular';
 
 import RegistrationFormComponent from './registration-form.component.js';
-import textOnly from '../form-validator/form-validator.module.js';
+import textOnly from '../../directives/form-validator/form-validator.module.js';
 
 console.log(textOnly);
 

@@ -5,47 +5,55 @@
 
     <div name="form"  class="registration_form-form">
         <form name="form">
-            <input name="email"
-                ng-model="$ctrl.email"
-                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.email.$valid, 'redColor': form.email.$invalid && form.email.$dirty}"
-                placeholder="user_name@epam.com"
-                class="registration-form-input"
-                required autofocus email/>
-                <span class="redColorText" ng-show="!form.email.$valid && form.email.$dirty && form.email.$viewValue.length">This email is not valid</span>
-                <span class="redColorText" ng-show="!form.email.$viewValue.length && form.email.$dirty">Please supply your email</span>
-            <input name="password"
-                ng-model="$ctrl.password"
-                min-length="8"
-                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.name.$valid, 'redColor': form.name.$invalid && form.name.$dirty}"
-                placeholder="........"
-                class="registration-form-input"
-                required/>
-
-            <input name="confirm-password" placeholder="confirm password" class="registration-form-input" required />
-            <input name="name"
-                ng-model="$ctrl.name"
-                min-length="2"
-                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.name.$valid, 'redColor': form.name.$invalid && form.name.$dirty}"
-                placeholder="имя"
-                class="registration-form-input"
-                required text-only />
-                <span  class="redColorText" ng-show="!form.name.$valid && form.name.$dirty && form.name.$viewValue.length">This name is not valid</span>
-                <span  class="redColorText" ng-show="!form.name.$viewValue.length && form.name.$dirty">Please supply your name</span>
-
-            <input name="surname"
-                ng-model="$ctrl.surname"
-                min-length="2"
-                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.surname.$valid, 'redColor': form.surname.$invalid && form.surname.$dirty}"
-                placeholder="фамилия"
-                class="registration-form-input"
-                required text-only />
-                 <span class="redColorText" ng-show="!form.surname.$valid && form.surname.$dirty && form.surname.$viewValue.length">This surname is not valid</span>
-                 <span class="redColorText" ng-show="!form.surname.$viewValue.length && form.surname.$dirty">Please supply your surname</span>
-
+            <div class="form-group form-width">
+                <input name="email"
+                    ng-model="$ctrl.email"
+                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
+                    ng-class="{'greenColor': form.email.$valid, 'redColor': form.email.$invalid && form.email.$dirty}"
+                    placeholder="user_name@epam.com"
+                    class="registration-form-input"
+                    required autofocus email/>
+                    <p class="redColorText" ng-show="!form.email.$valid && form.email.$dirty && form.email.$viewValue.length">This email is not valid</p>
+                    <p class="redColorText" ng-show="!form.email.$viewValue.length && form.email.$dirty">Please supply your email</p>
+            </div>
+            <div class="form-group form-width">
+                <input name="password"
+                    ng-model="$ctrl.password"
+                    min-length="8"
+                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
+                    ng-class="{'greenColor': form.name.$valid, 'redColor': form.name.$invalid && form.name.$dirty}"
+                    placeholder="........"
+                    class="registration-form-input"
+                    required/>
+            </div>
+            <div class="form-group form-width">
+                <input name="confirm-password" placeholder="confirm password" class="registration-form-input" required />
+            </div>
+            <div class="form-group form-width">
+                <input name="name"
+                    ng-model="$ctrl.name"
+                    min-length="2"
+                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
+                    ng-class="{'greenColor': form.name.$valid, 'redColor': form.name.$invalid && form.name.$dirty}"
+                    placeholder="имя"
+                    class="registration-form-input"
+                    required text-only />
+                    <span  class="redColorText" ng-show="!form.name.$valid && form.name.$dirty && form.name.$viewValue.length">This name is not valid</span>
+                    <span  class="redColorText" ng-show="!form.name.$viewValue.length && form.name.$dirty">Please supply your name</span>
+            </div>
+            <div class="form-group form-width">
+                <input name="surname"
+                    ng-model="$ctrl.surname"
+                    min-length="2"
+                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
+                    ng-class="{'greenColor': form.surname.$valid, 'redColor': form.surname.$invalid && form.surname.$dirty}"
+                    placeholder="фамилия"
+                    class="registration-form-input"
+                    required text-only />
+                     <span class="redColorText" ng-show="!form.surname.$valid && form.surname.$dirty && form.surname.$viewValue.length">This surname is not valid</span>
+                     <span class="redColorText" ng-show="!form.surname.$viewValue.length && form.surname.$dirty">Please supply your surname</span>
+            </div>
+            <div class="form-group form-width">
             <input name="phone"
                 ng-model="$ctrl.phone"
                 placeholder="+38-XXX-XX-XX-XX"
@@ -55,6 +63,8 @@
                 required phone />
                 <span class="redColorText" ng-show="!form.phone.$valid && form.phone.$dirty && form.phone.$viewValue.length">This phone is not valid</span>
                 <span class="redColorText" ng-show="!form.phone.$viewValue.length && form.phone.$dirty">Please supply your phone</span>
+            </div>
+
             <div class="registration_form-button-wrapper">
                 <button type="submit" class="btn registration_form-button-wrapper uui-button large lime-green"> Create account </button>
             </div>
@@ -65,11 +75,9 @@
         <span> or </span>
     </p>
 
-    <div class="epam-login">
-        <button class="uui-button registration_form-button-wrapper dark-gray   registration_form-login-button">
-            <i class="fa fa-angle-left"></i>
+    <div class="epam-login registration-SingIn-button" >
+        <button class="uui-button dark-gray registration_form-SingIn-button" ng-click=$ctrl.redirect("signin")>
             Sign in
-            <i class="fa fa-angle-right"></i>
         </button>
     </div>
 </div>

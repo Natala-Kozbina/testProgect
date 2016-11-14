@@ -5,22 +5,57 @@ class SupplierService {
                 name: 'Supplier 1',
                 data : [
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "17.00грн",
-                        likes: "25"
+                        likes: "25",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "17.00грн",
-                        likes: "25"
+                        likes: "25",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "17.00грн",
-                        likes: "25"
+                        likes: "25",
+                        comments: []
                     }
                 ]
             },
@@ -28,28 +63,102 @@ class SupplierService {
                 name: 'Supplier 2',
                 data : [
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "16.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     }
                 ]
             },
@@ -57,34 +166,128 @@ class SupplierService {
                 name: 'Supplier 3',
                 data : [
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "10"
+                        likes: "10",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "9 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
+                            likes: "30"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     },
                     {
-                        name: "Чизтейк",
-                        description: "Чизтейк со смородиной",
+                        name: "Чизкейк",
+                        description: "Чизкейк со смородиной",
                         price: "18.00грн",
-                        likes: "50"
+                        likes: "50",
+                        comments: [
+                          {
+                            name: "Luke Skyworker",
+                            date: "10 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet",
+                            likes: "3"
+                          },
+                          {
+                            name: "Luke Skyworker",
+                            date: "11 Aug 16, 13:00",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                            likes: "20"
+                          }
+                        ]
                     }
                 ]
             }

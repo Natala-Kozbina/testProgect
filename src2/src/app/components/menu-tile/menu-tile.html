@@ -1,5 +1,6 @@
 <div class="menu-tile">
-  <div class="menu-tile-dish">
+  <div class="menu-tile-dish" ng-show="$ctrl.displayDish">
+
     <div class="menu-tile-dish__label">
       <div class="menu-tile-likes">
         <div class="menu-tile-likes__counter">
@@ -10,9 +11,10 @@
         </div>
       </div>
     </div>
+
     <div class="menu-tile-dish__header clearfix">
         <div class="menu-tile-link menu-tile-link--comments">
-           <a href="">
+           <a href="" ng-click="$ctrl.showComments()">
              Comments
              <span class="icon-arrow-right"></span>
            </a>
@@ -40,10 +42,10 @@
     </div>
   </div>
 
-  <div class="menu-tile-comments" ng-show="false">
+  <div class="menu-tile-comments" ng-show="$ctrl.displayComments">
     <div class="menu-tile-comments__header">
       <div class="menu-tile-link">
-        <a href="" class="menu-tile-link">
+        <a href="" class="menu-tile-link" ng-click="$ctrl.showDish()">
           <span class="icon-arrow-left"></span>
           Блюдо
         </a>
@@ -56,6 +58,30 @@
       </div>
     </div>
     <div class="menu-tile-comments__list">
+
+      <div class="dish-comment" ng-repeat="comment in $ctrl.dishData.comments">
+        <div class="dish-comment__avatar">
+          <img src="../../assets/img/menu/ava-example.png" alt="" />
+        </div>
+        <div class="dish-comment__content">
+          <div class="comment-header">
+            <div class="comment-header__name">
+              {{comment.name}}
+            </div>
+            <div class="comment-header__likes">
+              <span class="icon-like-gray"></span>
+              {{comment.likes}}
+            </div>
+          </div>
+          <div class="comment-date">
+            {{comment.date}}
+          </div>
+          <div class="comment-message">
+            {{comment.message}}
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

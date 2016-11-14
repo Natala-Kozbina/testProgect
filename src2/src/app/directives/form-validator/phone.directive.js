@@ -1,6 +1,6 @@
 // import angular from 'angular';
 
-class Email {
+class Phone {
     constructor() {
         this.restrict = 'A';
         this.require = 'ngModel';
@@ -10,9 +10,9 @@ class Email {
     // require: 'ngModel',// что б у элемента к которорму применяетмя деректова была модель
     link($scope, $element, $attrs, $ctrl) {
 
-        $ctrl.$validators.email = function(modelValue, viewValue) {
-                    var reg = /^[a-z]{1,}@[a-z]{1,}\.[a-z]{2,}$/;
-                    if (reg.test(modelValue)) {
+        $ctrl.$validators.phone = function(modelValue) {
+            var reg = /^\+38-[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+                if (reg.test(modelValue)) {
                         return true;
                     } else {
                         return false;
@@ -21,4 +21,4 @@ class Email {
     }
 }
 
-export default Email;
+export default Phone;

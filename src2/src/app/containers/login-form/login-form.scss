@@ -1,66 +1,44 @@
 .login-form {
-    width: 430px;
-    height: 550px;
     background-color: rgba(233, 235, 232, 0.95);
-    padding-top: 90px;
+    padding-top: 3%;
+    padding-top: 35px;
 }
 
 .form {
-    width: 350px;
-    margin-left: 40px;
-    padding-bottom: 30px;
-    margin-bottom: 50px;
+    padding: 0 35px;
+    margin-top: 25px;
 }
 
 .login-form-input {
-    width: 350px;
-    height: 35px;
-    margin-bottom: 35px;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     border-color: none;
-    padding-left: 10px;
+    padding-left: 3%;
 }
 
-.login-form-button {
-    width: 350px;
+.login-form-button{
+    width: 100%;
+    text-align: center;
     background-color: #a3c644;
     color: white;
     text-transform: uppercase;
 }
 
+.login-form-button-wrapper {
+    background-color: #a3c644;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
 .page-title {
-    color: red;
-    width: 430px;
-    margin: 0 auto 30px auto;
-}
-.fancy {
-    line-height: 0.5;
-    text-align: center;
-    color: #999999;
-}
-.fancy span {
-    display: inline-block;
-    position: relative;
-}
-.fancy span:before,
-.fancy span:after {
-    content: "";
-    position: absolute;
-    height: 7px;
-    border-bottom: 1px solid #999999;
-    top: 0;
-    width: 30px;
-}
-.fancy span:before {
-    right: 100%;
-    margin-right: 15px;
-}
-.fancy span:after {
-    left: 100%;
-    margin-left: 15px;
+    width: 75%;
+    margin: 5% auto;
 }
 
 .registration-form-button {
-    margin-left: 40px;
+    float: right;
 }
 
 .uui-button.transparent.forgotten-password-button  {
@@ -74,6 +52,19 @@
     color: #464547;
 }
 
-.forgotten-password-button  {
-    margin-left: 40px;
+.login-button-wrapper {
+    padding:35px;
+}
+
+@media screen and (max-width: 576px) {
+    .login-button-wrapper {
+        text-align: center;
+    }
+
+    .registration-form-button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        float: none;
+    }
+
 }
