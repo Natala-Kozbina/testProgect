@@ -21,13 +21,13 @@
                 <input name="password"
                 ng-model="$ctrl.password"
                 ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.password.$valid, 'redColor': form.password.$invalid && form.password.$dirty}"
+
                 placeholder="........"
                 class="registration-form-input"
-                password
+                
                 required />
-                <p class="redColorText" ng-show="!form.password.$valid && form.password.$dirty && form.password.$viewValue.length">This password is not valid</p>
                 <p class="redColorText" ng-show="!form.password.$viewValue.length && form.password.$dirty">Please supply your password</p>
+
             </div>
             <div class="login-form-button-wrapper">
                 <button type="submit" class="btn login-form-button  uui-button large lime-green" ng-disabled="!form.$valid"> Sign in </button>

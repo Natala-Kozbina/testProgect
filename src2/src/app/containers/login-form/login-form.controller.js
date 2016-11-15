@@ -6,13 +6,18 @@ class LoginFormController {
     }
 
     checkSignIn (ngModel) {
-        // console.log('this.loginService - ', this.loginService);
         let email = ngModel.email;
         let password = ngModel.password;
+
         this.loginService.checkLoginForm(email, password);
+        console.log('ngModel => ',  ngModel);
 
     //   this.state.go(state);
 
+    }
+
+    redirect(state) {
+        this.state.go(state);
     }
 }
 
