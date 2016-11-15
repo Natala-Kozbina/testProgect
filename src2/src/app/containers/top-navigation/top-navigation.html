@@ -1,0 +1,27 @@
+<ul class="b-top-navigation" ng-class="{'b-top-navigation--showed': $ctrl.menuShowed}">
+    <li class="b-top-navigation__item">
+        <a href class="b-top-navigation__link">Контакты</a>
+    </li>
+    <li class="b-top-navigation__item">
+        <a href class="b-top-navigation__link">Доставка</a>
+    </li>
+    <li class="b-top-navigation__item">
+        <a href class="b-top-navigation__link">FAQ</a>
+    </li>
+    <li class="b-top-navigation__item">
+        <a href class="b-top-navigation__link">
+            <balance></balance>
+        </a>
+    </li>
+    <li class="b-top-navigation__item">
+        <a href class="b-top-navigation__link">
+            <shopping-cart></shopping-cart>
+        </a>
+    </li>
+    <li class="b-top-navigation__item">
+        <dropdown class="b-top-navigation__dropdown"
+                  photo="$ctrl.userPhoto"
+                  menu-title="Luke Skywalker"
+                  menu-list="$ctrl.userMenu"></dropdown>
+    </li>
+</ul>

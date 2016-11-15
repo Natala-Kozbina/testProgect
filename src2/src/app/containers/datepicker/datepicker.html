@@ -1,0 +1,18 @@
+<div class="b-datepicker" ng-class="{'b-datepicker--showed': $ctrl.menuShowed}">
+    <div class="b-datepicker__wrapper" ng-click="$ctrl.open()">
+        <div class="b-datepicker__title">Дата заказа: </div>
+        <div>
+            <span class="b-datepicker__value">{{$ctrl.date | date : 'dd.MM.y'}}</span>
+        <span class="b-datepicker__icon">
+            <i class="glyphicon glyphicon-calendar"></i>
+        </span>
+        </div>
+    </div>
+
+    <input type="text" class="b-datepicker__input"
+           uib-datepicker-popup
+           ng-model="$ctrl.date"
+           is-open="$ctrl.opened"
+           ng-required="true"
+           close-text="Close"/>
+</div>

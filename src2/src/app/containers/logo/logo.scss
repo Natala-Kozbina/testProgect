@@ -1,0 +1,30 @@
+.b-logo {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px 0 18px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &-img {
+      display: inline-block;
+      height: 34px;
+      margin-right: 5px;
+
+      & img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &-title {
+      font-family: 'Oswald Regular', Arial, sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font-size: 22px;
+      vertical-align: bottom;
+    }
+}

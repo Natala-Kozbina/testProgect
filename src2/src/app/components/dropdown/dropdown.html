@@ -1,0 +1,14 @@
+<div class="b-dropdown" uib-dropdown on-toggle="toggled(open)">
+    <a class="b-dropdown__link" href uib-dropdown-toggle>
+        <div class="b-dropdown__photo" ng-show="$ctrl.photo">
+            <img src="{{$ctrl.photo}}" alt="">
+        </div>
+        <span class="b-dropdown__title">{{$ctrl.menuTitle}}</span>
+        <span class="arrow fa fa-angle-down"></span>
+    </a>
+    <ul class="b-dropdown__menu" uib-dropdown-menu>
+        <li class="b-dropdown__item" ng-repeat="item in $ctrl.menuList">
+          <a href="item.href" class="b-dropdown__menu-link">{{item.title}}</a>
+        </li>
+    </ul>
+</div>

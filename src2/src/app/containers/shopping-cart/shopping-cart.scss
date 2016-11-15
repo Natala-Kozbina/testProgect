@@ -1,0 +1,25 @@
+.b-shopping-cart {
+  font-size: 32px;
+  position: relative;
+  color: #a1a1a1;
+  margin-top: 15px;
+
+
+  &__label {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 15px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #c50000;
+    position: absolute;
+    bottom: -10px;
+    right: -15px;
+    color: #fff;
+    font-family: Arial;
+
+  }
+}
