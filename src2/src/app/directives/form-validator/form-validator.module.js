@@ -16,5 +16,4 @@ let ValidatorModule = angular
     .directive('confirmPassword', () => new  confirmPassword)
     .name;
 
-
 export default ValidatorModule;

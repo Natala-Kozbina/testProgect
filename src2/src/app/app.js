@@ -12,6 +12,10 @@ import ContainersModule from './containers/containers.module';
 
 import 'assets/uui/css/uui-all.css';
 
+import CONSTS from './app.consts.js';
+
+// console.log('APP.CONSTS - ', CONSTS);
+
 angular
     .module('lunchTimer', [
         'ui.router',
@@ -20,5 +24,6 @@ angular
         ComponentsModule,
         ContainersModule
     ])
+    .constant('CONSTS', CONSTS)
     .config(routerConfig)
     .name;

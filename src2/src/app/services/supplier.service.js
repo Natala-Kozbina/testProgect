@@ -4,8 +4,7 @@ class SupplierService {
             {
                 name: 'Supplier 1',
                 data : [
-                    {
-                        name: "Чизкейк",
+                    { name: "Чизкейк",
                         description: "Чизкейк со смородиной",
                         price: "17.00грн",
                         likes: "25",
@@ -20,8 +19,7 @@ class SupplierService {
                           {
                             name: "Luke Skyworker",
                             date: "10 Aug 16, 13:00",
-                            message: "Lorem ipsum dolor sit amet",
-                            likes: "3"
+                            message: "Lorem ipsum dolor sit amet", likes: "3"
                           },
                           {
                             name: "Luke Skyworker",

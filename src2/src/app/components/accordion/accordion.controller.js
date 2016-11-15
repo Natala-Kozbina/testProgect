@@ -4,7 +4,7 @@ class AccordionController {
         this.oneAtATime = true;
         this.items = null;
         this.supplierService = supplierService;
-
+        console.log(supplierService);
     }
 
     $onInit() {
