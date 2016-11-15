@@ -1,12 +1,12 @@
-class Phone {
+class Password {
     constructor() {
         this.restrict = 'A';
         this.require = 'ngModel';
     }
     link($scope, $element, $attrs, $ctrl) {
 
-        $ctrl.$validators.phone = function(modelValue) {
-            var reg = /^\+380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}$/;
+        $ctrl.$validators.password = function(modelValue) {
+            var reg = /(?=^.{8,}$)(?=.*\d)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
             if (reg.test(modelValue)) {
                 return true;
             } else {
@@ -16,4 +16,4 @@ class Phone {
     }
 }
 
-export default Phone;
+export default Password;

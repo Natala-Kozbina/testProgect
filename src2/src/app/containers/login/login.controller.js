@@ -5,13 +5,12 @@ class LoginController {
     }
 
     gotoRegistration () {
+
         let currentState = this.state.current.name;
-        console.log(currentState);
         if(currentState === "registration") {
             return true;
         }
     }
-
 }
 
 export default LoginController;
