@@ -28,7 +28,7 @@ class LoginFormController {
 
         let user = {
             'email' : "www@www.www",
-            'password' : "1Wwwwww"
+            'password' : "xxx"
         };
 
         if(user.email === data.email && user.password === data.password) {
@@ -42,8 +42,8 @@ class LoginFormController {
         this.$log.error(error);
     }
 
-    redirect(state) {
-        this.state.go(state);
+    redirect() {
+        this.state.go("registration");
     }
 }
 

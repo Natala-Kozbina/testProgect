@@ -3,8 +3,8 @@ class RegistrationFormController {
         "ngInject";
         this.state = $state;
     }
-    redirect (state) {
-      this.state.go(state);
+    redirect () {
+      this.state.go("signin");
     }
 }
 
