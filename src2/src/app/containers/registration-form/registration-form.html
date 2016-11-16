@@ -24,6 +24,7 @@
                     ng-class="{'greenColor': form.password.$valid, 'redColor': form.password.$invalid && form.password.$dirty}"
                     placeholder="........"
                     class="registration-form-input"
+                    type="password"
                     password
                     required />
                     <p class="redColorText" ng-show="!form.password.$valid && form.password.$dirty && form.password.$viewValue.length">This password is not valid</p>
@@ -37,6 +38,7 @@
                 placeholder="confirm password"
                 class="registration-form-input"
                 first-password="{{$ctrl.password}}"
+                type="password"
                 confirm-password
                 required />
                 <p class="redColorText" ng-show="!form.confirmPassword.$valid && form.confirmPassword.$dirty && form.confirmPassword.$viewValue.length">This password is not valid</p>

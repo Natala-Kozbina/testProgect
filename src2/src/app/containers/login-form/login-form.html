@@ -19,15 +19,16 @@
             </div>
             <div class="form-group form-width">
                 <input name="password"
+                type="password"
                 ng-model="$ctrl.password"
                 ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
 
                 placeholder="........"
                 class="registration-form-input"
-                
+
                 required />
                 <p class="redColorText" ng-show="!form.password.$viewValue.length && form.password.$dirty">Please supply your password</p>
-
+                <p class="redColorText" ng-show="$ctrl.error">You wrote wrong dates, please try again</p>
             </div>
             <div class="login-form-button-wrapper">
                 <button type="submit" class="btn login-form-button  uui-button large lime-green" ng-disabled="!form.$valid"> Sign in </button>
