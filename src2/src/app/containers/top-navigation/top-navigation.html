@@ -8,7 +8,12 @@
     <li class="b-top-navigation__item" ng-if="!$ctrl.visibility">
         <a ui-sref="signin" class="b-top-navigation__link">Login</a>
     </li>
+
     <li class="b-top-navigation__item" ng-if="$ctrl.visibility">
         <a class="b-top-navigation__link"> Hello, {{$ctrl.userMenu.name}} {{$ctrl.userMenu.surname}}</a>
+    </li>
+
+    <li class="b-top-navigation__item" ng-if="$ctrl.visibility">
+        <a ui-sref="signin" class="b-top-navigation__link">Logout</a>
     </li>
 </ul>

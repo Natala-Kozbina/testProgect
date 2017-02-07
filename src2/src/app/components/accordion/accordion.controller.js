@@ -1,18 +1,21 @@
 class AccordionController {
-    constructor(supplierService) {
+    constructor(supplierService, loginService) {
         "ngInject";
-        this.oneAtATime = true;
+        // this.oneAtATime = true;
         this.items = null;
         this.supplierService = supplierService;
-        console.log(supplierService);
+        this.loginService = loginService;
     }
 
     $onInit() {
+        this.menuShowed = false;
         this.items = this.supplierService.getSuppliers();
+        this.visibility = this.loginService.getVisibility();
     }
 
+    toggleMenu() {
+        this.menuShowed = !this.menuShowed;
+    }
 }
-
-AccordionController.$inject = ['supplierService'];
 
 export default AccordionController;

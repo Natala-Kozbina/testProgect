@@ -1,22 +1,11 @@
-<script type="text/ng-template" id="templ">
-  <div class="panel accordion-item">
-    <div class="accordion-heading">
-      <h4 class="accordion-title">
-        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
-          <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
-            {{heading}}
-          </span>
-        </a>
-      </h4>
+<div ng-if="$ctrl.visibility">
+    <div>
+        <app-datepicker
+            menu-showed="$ctrl.menuShowed"
+            toggle-menu="$ctrl.toggleMenu()">
+        </app-datepicker>
     </div>
-    <div class="panel-collapse collapse" uib-collapse="!isOpen">
-        <div class="accordion-body" ng-transclude></div>
-    </div>
-  </div>
-</script>
-
-<uib-accordion close-others="$ctrl.oneAtATime" class="uui-accordion">
-    <div uib-accordion-group class="panel-default" heading="{{item.name}}" ng-repeat="item in $ctrl.items" template-url="templ">
+    <div  class="panel-default" heading="{{item.name}}" ng-repeat="item in $ctrl.items" template-url="templ">
         <menu-list supplier="item"></menu-list>
     </div>
-</uib-accordion>
+</div>

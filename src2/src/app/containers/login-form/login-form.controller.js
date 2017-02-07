@@ -7,6 +7,10 @@ class LoginFormController {
         this.user = {};
     }
 
+    $onInit() {
+        this.loginService.removeUser();
+    }
+
     checkSignIn (ngModel) {
         const email = ngModel.email;
         const password = ngModel.password;
@@ -15,7 +19,7 @@ class LoginFormController {
             email,
             password
         }
-
+        console.log(this.user);
         this.loginService
             .checkLoginForm(this.user)
             .then(this.loginHandler.bind(this))
@@ -24,11 +28,18 @@ class LoginFormController {
 
     loginHandler() {
         console.log(this.user);
-
+        let userEmail = this.user.email;
+        let userPassword = this.user.password
         let userFromServer = {
-            'email' : "www@www.www",
-            'password' : "xxx"
-        };
+                "name": "Natala",
+                "password": userPassword,
+                "surname": "Admin",
+                "email": userEmail,
+                "phone": "+38088-888-88-88",
+                "visibility": true
+            };
+
+        this.loginService.setUser(userFromServer);
 
         if(userFromServer.email === this.user.email && userFromServer.password === this.user.password) {
             this.state.go('home');
@@ -48,16 +59,14 @@ class LoginFormController {
     }
 
     changeEmail() {
-        console.log('changeEmail');
         return this.errorEmail = false;
     }
 
     changePassword() {
-        console.log('changePassword');
         return this.errorPassword = false;
     }
 }
 
-LoginFormController.$inject = ['$state', 'loginService', '$log'];
+// LoginFormController.$inject = ['$state', 'loginService', '$log'];
 
 export default LoginFormController;
