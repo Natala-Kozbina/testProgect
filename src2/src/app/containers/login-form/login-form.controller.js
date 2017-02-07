@@ -8,21 +8,18 @@ class LoginFormController {
     }
 
     checkSignIn (ngModel) {
-        let email = ngModel.email;
-        let password = ngModel.password;
+        const email = ngModel.email;
+        const password = ngModel.password;
 
         this.user = {
-            'email' : email,
-            'password' : password
+            email,
+            password
         }
 
-        this.loginHandler();
-
-        // this.loginService
-        //     .checkLoginForm(user)
-        //     .then(this.loginHandler.bind(this))
-        //     .catch(this.errorHandler.bind(this));
-        // console.log('ngModel => ',  ngModel);
+        this.loginService
+            .checkLoginForm(this.user)
+            .then(this.loginHandler.bind(this))
+            .catch(this.errorHandler.bind(this));
     }
 
     loginHandler() {

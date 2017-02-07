@@ -21,9 +21,9 @@ const ContainersModule = angular
         shoppingCart,
         balance,
         datepicker,
-        LoginComponent.name,
-        LoginFormComponent.name,
-        RegistrationFormComponent.name
+        LoginComponent,
+        LoginFormComponent,
+        RegistrationFormComponent
     ]);
 
 export default ContainersModule.name;

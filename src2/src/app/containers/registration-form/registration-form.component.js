@@ -1,8 +1,8 @@
 import template from './registration-form.html';
-import controller from './registration-form.conrtoller.js';
+import controller from './registration-form.controller.js';
 import './registration-form.scss';
 
-let RegistrationFormComponent = {
+const RegistrationFormComponent = {
     bindings: {},
     template,
     controller

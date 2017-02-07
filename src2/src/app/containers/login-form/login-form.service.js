@@ -1,17 +1,27 @@
 class LoginService {
-    constructor ($http, CONSTS) {
-        'ngIngect';
+    constructor ($http, CONSTS, $q) {
         this.$http = $http;
-        this.const = CONSTS;
+        this.consts = CONSTS;
+        this.$q = $q;
+        this.visibility = false;
     }
 
-    checkLoginForm(email, password) {
-        let url =  this.const.URLS.LOGIN;
-        console.log('checkSignIn => URL - ', url);
-        return this.$http
-            .get(url, {email: email, password: password})
+    checkLoginForm(user) {
+        const url =  this.consts.URLS.LOGIN;
+        console.log('checkLoginForm => URL - ',url);
+        user = {
+            'email' : "www@www.www",
+            'password' : "xxx"
+        };
+        this.visibility = true;
+        return this.$q.resolve(user);
+    }
+
+    getVisibility () {
+        return this.visibility;
     }
 }
-LoginService.$inject = ['$http', 'CONSTS'];
+
+LoginService.$inject = ['$http', 'CONSTS', '$q'];
 
 export default LoginService;

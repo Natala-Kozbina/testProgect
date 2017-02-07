@@ -9,6 +9,7 @@ let LoginFormModule = angular
     // .module('loginForm', [email, CONSTS])
     .module('loginForm', [email])
     .component('loginForm', LoginFormComponent)
-    .service('loginService', LoginService);
+    .service('loginService', LoginService)
+    .name;
 
 export default LoginFormModule;

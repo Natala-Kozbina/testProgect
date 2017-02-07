@@ -3,7 +3,7 @@
         <span> Sign Up  </span>
     </h1>
 
-    <div name="form"  class="registration_form-form">
+    <div name="form"  class="registration_form-form" ng-submit=$ctrl.checkRegistration($ctrl)>
         <form name="form">
             <div class="form-group form-width">
                 <input name="email"
@@ -12,6 +12,7 @@
                     ng-class="{'greenColor': form.email.$valid, 'redColor': form.email.$invalid && form.email.$dirty}"
                     placeholder="user_name@epam.com"
                     class="registration-form-input"
+                    ng-change="$ctrl.checkData()"
                     email
                     required autofocus />
                     <p class="redColorText" ng-show="!form.email.$valid && form.email.$dirty && form.email.$viewValue.length">This email is not valid</p>
@@ -37,11 +38,11 @@
                 ng-class="{'greenColor': form.confirmPassword.$valid, 'redColor': form.confirmPassword.$invalid && form.confirmPassword.$dirty}"
                 placeholder="confirm password"
                 class="registration-form-input"
-                first-password="{{$ctrl.password}}"
+                first-password="$ctrl.password"
                 type="password"
                 confirm-password
                 required />
-                <p class="redColorText" ng-show="!form.confirmPassword.$valid && form.confirmPassword.$dirty && form.confirmPassword.$viewValue.length">This password is not valid</p>
+                <p class="redColorText" ng-show="form.confirmPassword.$dirty && !$ctrl.checkConfirmPassword($ctrl) && form.confirmPassword.$viewValue.length">This password is not valid</p>
                 <p class="redColorText" ng-show="!form.confirmPassword.$viewValue.length && form.confirmPassword.$dirty">Please supply your password</p>
             </div>
             <div class="form-group form-width">
@@ -86,6 +87,7 @@
             <div class="registration_form-button-wrapper">
                 <button type="submit" class="btn registration_form-button-wrapper uui-button large lime-green" ng-disabled="!form.$valid"> Create account </button>
             </div>
+            <span class="redColorText" ng-if=$ctrl.errorRegistration>This user has already been registered, please try again.</span>
         </form>
     </div>
 

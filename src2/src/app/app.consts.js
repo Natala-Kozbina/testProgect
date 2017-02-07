@@ -12,8 +12,6 @@
         REGISTRATION: baseUrl + registration
     };
 
-
-
 module.exports = {
     URLS: URLS
 };

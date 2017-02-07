@@ -1,11 +1,16 @@
 .b-header {
-  &__navigation {
-    height: auto;
-    background-color: #464547;
-    &__navigation {
-      float: right;
+    &__navigationNav {
+        display: flex;
+        justify-content: center;
     }
-  }
+
+    &__navigation {
+        height: auto;
+        background-color: #464547;
+        &__navigation {
+            float: right;
+        }
+    }
 
   &__landing-header {
     height: 60px;

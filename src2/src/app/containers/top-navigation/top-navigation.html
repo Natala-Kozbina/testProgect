@@ -1,27 +1,14 @@
 <ul class="b-top-navigation" ng-class="{'b-top-navigation--showed': $ctrl.menuShowed}">
-    <li class="b-top-navigation__item">
-        <a href class="b-top-navigation__link">Контакты</a>
+    <li class="b-top-navigation__item" ng-if="!$ctrl.visibility">
+        <a
+            class="b-top-navigation__link"
+            ng-click="$ctrl.gotoRegistration()"
+            >Sign up</a>
     </li>
-    <li class="b-top-navigation__item">
-        <a href class="b-top-navigation__link">Доставка</a>
+    <li class="b-top-navigation__item" ng-if="!$ctrl.visibility">
+        <a ui-sref="signin" class="b-top-navigation__link">Login</a>
     </li>
-    <li class="b-top-navigation__item">
-        <a href class="b-top-navigation__link">FAQ</a>
-    </li>
-    <li class="b-top-navigation__item">
-        <a href class="b-top-navigation__link">
-            <balance></balance>
-        </a>
-    </li>
-    <li class="b-top-navigation__item">
-        <a href class="b-top-navigation__link">
-            <shopping-cart></shopping-cart>
-        </a>
-    </li>
-    <li class="b-top-navigation__item">
-        <dropdown class="b-top-navigation__dropdown"
-                  photo="$ctrl.userPhoto"
-                  menu-title="Luke Skywalker"
-                  menu-list="$ctrl.userMenu"></dropdown>
+    <li class="b-top-navigation__item" ng-if="$ctrl.visibility">
+        <a class="b-top-navigation__link"> Hello, {{$ctrl.userMenu.name}} {{$ctrl.userMenu.surname}}</a>
     </li>
 </ul>
