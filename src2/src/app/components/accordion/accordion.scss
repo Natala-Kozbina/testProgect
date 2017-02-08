@@ -1,7 +1,46 @@
-
 .home__background-img {
     width: 100%;
     min-height: 100%;
     background: url(../../assets/img/menu/homePage.jpg) no-repeat;
     background-size: cover;
+}
+
+.accordion {
+    &__datapicker-wrapper {
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+    }
+    &__datapicker {
+        display:inline-block;
+        vertical-align: middle;
+        margin: 25px;
+        width: 180px;
+        height: 80px;
+        padding: 10px;
+    }
+    &__datapicker-title {
+        font-size: 20px;
+        display: inline-block;
+        float: left;
+    }
+    &__switch {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 6px 0 0 0;
+    }
+
+    &__checked {
+        display: inline-block;;
+        text-align: center;
+        margin: 0px;
+    }
+    &__datapicker-checkbox {
+        display: inline-block;
+        vertical-align: super;
+        font-size: 17px;
+    }
 }

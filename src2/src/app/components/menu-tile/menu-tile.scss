@@ -32,12 +32,11 @@
   background: url('../../assets/img/icons/icon-plus.png') no-repeat;
 }
 
-
-
 .menu-tile {
     width: 100%;
     height: auto;
     font-family: "SourceSans Pro Regular", sans-serif;
+
 }
 
 .menu-tile-dish {
@@ -59,14 +58,12 @@
         color: #464547;
     }
 
-    &__description {
-        width: 100%;
-        color: #a1a1a1;
-        font-size: 14px;
-        text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    &__infoDish {
+        display: inline-block;
+        float: right;
+        margin-top: -15%;
+        padding-right: 50px;
+        padding-top: 5px;
     }
 
     &__bottom {
@@ -86,28 +83,23 @@
 
 .menu-tile-order {
     float: right;
+    margin-left: 10px;
 }
 
 .menu-tile-dish__image,
 .menu-tile-dish__image img {
-    width:  100%;
-    height: auto; /*145px;*/
+    width:  50%;
+    height: auto;
+    padding-left: 25px;
 }
 
 .menu-tile-link {
-
     & a {
         color: #a1a1a1;
-
         &:hover {
           color: #37c2d5;
           text-decoration: none;
         }
-    }
-
-    &--comments {
-      float: right;
-      margin: 5px 0;
     }
 }
 
@@ -117,67 +109,4 @@
     &__input {
       width: 40px !important;
     }
-}
-
-.menu-tile-comments {
-  width: 100%;
-  height: 300px;
-  padding: 0 12px 10px;
-  box-sizing: border-box;
-  position: relative;
-  border: solid 1px #cacaca;
-  margin: 5px 0;
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 0;
-  }
-
-  &__list {
-    height: 260px;
-    overflow-y: auto;
-  }
-
-}
-
-
-.dish-comment {
-  display: flex;
-  padding: 10px 0;
-  &:not(:last-child) {
-    border-bottom: solid 1px #cacaca;
-  }
-  &__avatar {
-    margin: 0 8px 0 0;
-  }
-  &__content {
-
-  }
-}
-
-.comment-header {
-  display: flex;
-  justify-content: space-between;
-
-  &__name {
-    color: #000;
-    font-size: 14px;
-  }
-  &__likes {
-    color: #a1a1a1;
-    font-size: 10px;
-    margin: 3px 5px 0 0;
-  }
-}
-
-.comment-date {
-  color: #a1a1a1;
-  font-size: 12px;
-  margin: 0 0 3px 0;
-}
-
-.comment-message {
-  color: #464547;
-  font-size: 14px;
 }

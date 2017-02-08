@@ -1,19 +1,11 @@
 .b-datepicker {
   height: 60px;
   position: relative;
-  float: left;
+  float: right;
   text-align: center;
-  color: #a1a1a1;
-  background-color: #464547;
-
-  &:hover {
-    background: #333;
-    color: #fff;
-  }
 
   &__wrapper {
     height: 100%;
-    padding: 20px;
   }
 
   &__title {
@@ -22,15 +14,12 @@
   &__value, &__icon {
     display: inline-block;
     vertical-align: bottom;
-    color: #fff;
     padding-right: 5px;
+    font-size: 17px;
   }
   &__icon {
-    color: #fff;
     font-size: 16px;
     margin-top: -10px;
-    &:hover {
-    }
   }
 
   &__input {
@@ -40,7 +29,7 @@
 
 @media all and (max-width: 992px) {
   .b-datepicker {
-    display: none;
+    // display: none;
     float: none;
     clear: both;
     padding-top: 20px;

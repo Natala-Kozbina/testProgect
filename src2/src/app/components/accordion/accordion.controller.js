@@ -12,9 +12,15 @@ class AccordionController {
         this.visibility = this.loginService.getVisibility();
     }
 
-    toggleMenu() {
+    toggleMenu () {
         this.menuShowed = !this.menuShowed;
     }
+
+    choseInStockOnly () {
+        let inStockOnly = this.checkboxModel;
+        console.log('inStockOnly -> ', inStockOnly);
+    }
+
 }
 
 export default AccordionController;

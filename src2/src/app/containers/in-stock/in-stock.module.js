@@ -1,5 +1,5 @@
 import angular from 'angular';
-import BalanceController from './balance.component.js';
+import BalanceController from './in-stock.component.js';
 
 const balanceController = angular
     .module('balanceController', [])

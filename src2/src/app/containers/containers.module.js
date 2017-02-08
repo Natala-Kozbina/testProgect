@@ -5,7 +5,7 @@ import logo from './logo/logo.module';
 import topNavigation from './top-navigation/top-navigation.module';
 import menuToggle from './menu-toggle/menu-toggle.module';
 import shoppingCart from './shopping-cart/shopping-cart.module';
-import balance from './balance/balance.module';
+import balance from './in-stock/in-stock.module';
 import datepicker from './datepicker/datepicker.module';
 
 import LoginComponent from './login/login.module';

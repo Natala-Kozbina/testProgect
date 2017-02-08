@@ -6,12 +6,12 @@ class MenuTileController {
         this.displayComments = false;
     }
     showComments () {
-        this.displayDish = false;
-        this.displayComments = true;
+        // this.displayDish = false;
+        // this.displayComments = true;
     }
     showDish () {
-        this.displayDish = true;
-        this.displayComments = false;
+        // this.displayDish = true;
+        // this.displayComments = false;
     }
 }
 

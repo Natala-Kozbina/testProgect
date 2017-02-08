@@ -1,11 +1,34 @@
 <div ng-if="$ctrl.visibility">
-    <div>
-        <app-datepicker
-            menu-showed="$ctrl.menuShowed"
-            toggle-menu="$ctrl.toggleMenu()">
-        </app-datepicker>
+    <div  class="container accordion__datapicker-wrapper clearfix">
+        <div class="accordion__datapicker">
+            <div class="accordion__datapicker-title">From:</div>
+            <app-datepicker
+                menu-showed="$ctrl.menuShowed"
+                toggle-menu="$ctrl.toggleMenu()">
+            </app-datepicker>
+        </div>
+        <div class="accordion__datapicker">
+            <div class="accordion__datapicker-title">To:</div>
+            <app-datepicker
+                menu-showed="$ctrl.menuShowed"
+                toggle-menu="$ctrl.toggleMenu()">
+            </app-datepicker>
+        </div>
+        <div class="accordion__datapicker">
+                <p class="large  accordion__checked">
+                    <input
+                        class="accordion__switch"
+                        ng-model="$ctrl.checkboxModel"
+                        ng-click="$ctrl.choseInStockOnly()"
+                        type="checkbox">
+                    </input>
+                </p>
+            <div class="accordion__datapicker-checkbox">In stock only</div>
+        </div>
     </div>
-    <div  class="panel-default" heading="{{item.name}}" ng-repeat="item in $ctrl.items" template-url="templ">
-        <menu-list supplier="item"></menu-list>
+
+    <div  class="panel-default container" heading="{{item.name}}" ng-repeat="item in $ctrl.items" template-url="templ">
+        <menu-list supplier="item">
+        </menu-list>
     </div>
 </div>
