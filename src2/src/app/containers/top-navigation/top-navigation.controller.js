@@ -1,19 +1,25 @@
 class TopNavigationController {
-    constructor($state, loginService) {
+    constructor($state, loginService, localStorageService) {
         "ngInject";
 
         this.state = $state;
         this.loginService = loginService;
-        this.loginService = loginService;
+        this.localStorageService = localStorageService;
     }
 
     $onInit() {
         this.show = false;
         this.visibility = this.loginService.getVisibility();
-        console.log('this.visibility -> ', this.visibility);
         this.testTitle = 'testTitle';
-        this.userMenu = this.loginService.getUser('user');
-        console.log('this.userMenu -> ', this.userMenu);
+        if(this.localStorageService.getUser('user')) {
+            this.userMenu = this.localStorageService.getUser('user');
+        } else {
+            this.userMenu = this.localStorageService.getNewUser('user');
+        }
+    }
+
+    gotoRegistration () {
+        this.state.go('registration');
     }
 
     showMenu() {

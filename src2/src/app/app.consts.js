@@ -13,11 +13,22 @@
     };
 
     const INPUT = {
-    MINLENGTH: 1,
-    MAXLENGTH: 100,
-};
+        MINLENGTH: 1,
+        MAXLENGTH: 100,
+    };
+
+    const USER = {
+        "name": "Natala",
+        "password": "xxx",
+        
+        "surname": "Admin",
+        "email": "www@www.www",
+        "phone": "+38088-888-88-88",
+        "visibility": true
+    };
 
 module.exports = {
     URLS,
-    INPUT
+    INPUT,
+    USER
 };

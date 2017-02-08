@@ -1,22 +1,21 @@
 class RegistrationService {
     constructor ($http, CONSTS, $q) {
+        'ngInject';
         this.$http = $http;
-        this.const = CONSTS;
+        this.consts = CONSTS;
         this.$q = $q;
     }
 
     checkRegistrForm(user) {
-        let url =  this.const.URLS.REGISTRATION;
-        console.log('checkRegistrForm => URL - ', url);
-
+        let url =  this.consts.URLS.REGISTRATION;
+        console.log('checkRegistrForm  url -> ', url);
+        let existingUserEmail = this.consts.USER.email;
         user = {
-            'sucsess' : 'www@www.www',
+            'sucsess' : existingUserEmail,
             'error' : "error"
         };
         return this.$q.resolve(user);
     }
 }
-
-RegistrationService.$inject = ['$http', 'CONSTS', '$q'];
 
 export default RegistrationService;

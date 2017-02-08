@@ -5,8 +5,9 @@
                 <logo class="header-lunchtimer-logo" ></logo>
             </div>
         </div>
-        <login-form ng-if=!$ctrl.gotoRegistration()></login-form>
-        <registration-form ng-if=$ctrl.gotoRegistration()></registration-form>
+        <login-form ng-if="$ctrl.signin"></login-form>
+        <registration-form ng-if="$ctrl.goToSelectPage(&quot;registration&quot;)"></registration-form>
+        <confirm-registration-form ng-if="$ctrl.goToSelectPage(&quot;confirm-registration&quot;)"></confirm-registration-form>
 
         <div class="footer-lunchtimer">
             <div class="login-form-footer-logo">

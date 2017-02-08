@@ -1,6 +1,6 @@
 <div class="registration-form">
     <h1 class="registration-page-title fancy">
-        <span> Sing up  </span>
+        <span> Sing up </span>
     </h1>
 
     <div name="form"  class="registration_form-form" ng-submit=$ctrl.checkRegistration($ctrl)>
@@ -129,7 +129,7 @@
                 <button type="submit"
                     class="btn registration_form-button-wrapper uui-button large lime-green"
                     ng-disabled="!form.$valid || (form.password.$viewValue != form.confirmPassword.$viewValue) || !$ctrl.passwordCheck">
-                    Создать аккаунт
+                    Create Account
                 </button>
             </div>
             <span class="error-message" ng-if=$ctrl.errorRegistration>Этот Пользователь уже зарегистрирован.</span>
@@ -137,12 +137,12 @@
     </div>
 
     <p class="registration-page-title fancy">
-        <span> или </span>
+        <span> or </span>
     </p>
 
     <div class="epam-login registration-SingIn-button" >
         <button class="uui-button dark-gray registration_form-SingIn-button" ng-click=$ctrl.redirect()>
-            Войти
+            Sign in
         </button>
     </div>
 

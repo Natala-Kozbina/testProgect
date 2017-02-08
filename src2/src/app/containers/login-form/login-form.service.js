@@ -1,40 +1,29 @@
 class LoginService {
-    constructor ($http, CONSTS, $q, $window) {
+    constructor ($http, CONSTS, $q, localStorageService) {
         'ngInject';
         this.$http = $http;
         this.consts = CONSTS;
         this.$q = $q;
-        this.visibility = false;
-        this.localStorage = $window.localStorage;
+        this.localStorageService = localStorageService;
     }
 
     checkLoginForm(user) {
         const url =  this.consts.URLS.LOGIN;
         console.log('checkLoginForm => URL - ',url);
-        user = this.getUser('user');
-        this.visibility = true;
+        this.localStorageService.getNewUser('newUser') ?
+            user = this.localStorageService.getNewUser('newUser') :
+            user = this.localStorageService.getUser('user');
         return this.$q.resolve(user);
     }
 
-    setUser (userFromServer) {
-        console.log('userFromServer -> ', userFromServer);
-        this.localStorage.setItem('user', JSON.stringify(userFromServer));
-    }
-
-    getUser () {
-        let parse = JSON.parse(this.localStorage.getItem('user'));
-        console.log('parse -> ', parse);
-        return JSON.parse(this.localStorage.getItem('user'));
-    }
-
     getVisibility () {
-        const userVisibility = this.getUser();
-        return userVisibility.visibility;
-    }
-
-    removeUser () {
-        let user = null;
-        this.localStorage.setItem('user', user);
+        const userVisibility = this.localStorageService.getUser();
+        const newUserVisibility = this.localStorageService.getNewUser()
+        if(newUserVisibility || userVisibility) {
+            return true
+        } else {
+            return false;
+        }
     }
 }
 

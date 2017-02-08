@@ -1,50 +1,39 @@
 class LoginFormController {
-    constructor ($state, loginService, $log) {
+    constructor ($state, loginService, localStorageService, $log, CONSTS) {
         "ngInject";
         this.state = $state;
         this.loginService = loginService;
+        this.localStorageService = localStorageService;
         this.$log = $log;
         this.user = {};
-
+        this.consts = CONSTS;
     }
 
     $onInit() {
-        this.loginService.removeUser();
+        this.localStorageService.removeUser();
     }
 
     checkSignIn (ngModel) {
         const email = ngModel.email;
         const password = ngModel.password;
-
         this.user = {
             email,
             password
         }
-        console.log(this.user);
         this.loginService
             .checkLoginForm(this.user)
             .then(this.loginHandler.bind(this))
             .catch(this.errorHandler.bind(this));
     }
 
-    loginHandler() {
-        console.log(this.user);
-        let userEmail = this.user.email;
-        let userPassword = this.user.password
-        let userFromServer = {
-                "name": "Natala",
-                "password": userPassword,
-                "surname": "Admin",
-                "email": userEmail,
-                "phone": "+38088-888-88-88",
-                "visibility": true
-            };
+    loginHandler(data) {
+        data ? this.userFromServer = data : this.userFromServer = this.consts.USER;
 
-        this.loginService.setUser(userFromServer);
-
-        if(userFromServer.email === this.user.email && userFromServer.password === this.user.password) {
+        if(this.userFromServer.email === this.user.email && this.userFromServer.password === this.user.password) {
+            this.localStorageService.setUser(this.userFromServer);
+            this.localStorageService.removeNewUser();
             this.state.go('home');
-        } else if (userFromServer.email != this.user.email) {
+        } else if (this.userFromServer.email != this.user.email) {
             return this.errorEmail = true;
         } else {
             return this.errorPassword = true;
@@ -67,7 +56,5 @@ class LoginFormController {
         return this.errorPassword = false;
     }
 }
-
-// LoginFormController.$inject = ['$state', 'loginService', '$log'];
 
 export default LoginFormController;

@@ -1,7 +1,6 @@
 class AccordionController {
     constructor(supplierService, loginService) {
         "ngInject";
-        // this.oneAtATime = true;
         this.items = null;
         this.supplierService = supplierService;
         this.loginService = loginService;
