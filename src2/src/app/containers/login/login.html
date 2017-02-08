@@ -1,18 +1,17 @@
 <div class="container background-img">
-
     <div class="container login-form-wrapper">
         <div class="header-lunchtimer">
-                <img class="header-lunchtimer-logo" src="../../assets/img/loginPage/EPM_LunchT_Login_1.png">
+            <div class="header-lunchtimer-logo-wrapper">
+                <logo class="header-lunchtimer-logo" ></logo>
+            </div>
         </div>
-
-    <login-form ng-if=!$ctrl.gotoRegistration()></login-form>
-    <registration-form ng-if=$ctrl.gotoRegistration()></registration-form>
+        <login-form ng-if=!$ctrl.gotoRegistration()></login-form>
+        <registration-form ng-if=$ctrl.gotoRegistration()></registration-form>
 
         <div class="footer-lunchtimer">
             <div class="login-form-footer-logo">
-                <img class="footer-logo" src="../../assets/uui/images/Logo_Epam_White.svg">
+                <img class="footer-logo" src="../../assets/img/angularjs.png">
             </div>
         </div>
     </div>
-
 </div>

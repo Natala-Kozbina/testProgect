@@ -1,19 +1,14 @@
-class Password {
-    constructor() {
-        this.restrict = 'A';
-        this.require = 'ngModel';
-    }
+const Password = () => ({
+    restrict: 'A',
+    require: 'ngModel',
     link($scope, $element, $attrs, $ctrl) {
 
-        $ctrl.$validators.password = function(modelValue) {
+        $ctrl.$validators.password = modelValue => {
             var reg = /(?=^.{8,}$)(?=.*\d)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
-            if (reg.test(modelValue)) {
-                return true;
-            } else {
-                return false;
-            }
+            return !!reg.test(modelValue)
         }
     }
-}
+
+})
 
 export default Password;

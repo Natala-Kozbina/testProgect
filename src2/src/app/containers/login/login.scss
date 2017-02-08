@@ -2,8 +2,7 @@
     width: 100%;
     min-height: 100%;
     background: url(../../assets/img/loginPage/EPM_LunchT_Login_2.jpg) no-repeat;
-    background-size: cover; /* Современные браузеры */
-
+    background-size: cover;
 }
 
 .login-form-wrapper {
@@ -14,10 +13,11 @@
 }
 
 .header-lunchtimer {
-    background-color: #199cb0;
-    color: white;
-    padding: 27px 0;
-    text-align: center;
+  background-color: #199cb0;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  height: 90px;
 }
 
 .header-icon {
@@ -28,9 +28,18 @@
 }
 
 .header-lunchtimer-logo {
-    width: 230px;
-    margin-top: 5%;
-    margin: 0 auto;
+  width: 230px;
+  margin-top: 5%;
+  margin: 0 auto;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+}
+
+
+.header-lunchtimer-logo-wrapper {
+  width: 305px;
+  margin: 0 auto;
 }
 
 .login-form-footer-logo {
@@ -40,8 +49,8 @@
 }
 
 .footer-logo {
-    width: 30%;
+    width: 40%;
     height: 12%;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
 }

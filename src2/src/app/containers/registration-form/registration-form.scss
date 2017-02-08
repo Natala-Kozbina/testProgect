@@ -19,22 +19,25 @@
     width: 100%;
     color: white;
     text-transform: uppercase;
-    margin-bottom: 2%;
+    border-radius: 0px;
 }
 
 .registration-page-title {
     width: 75%;
     margin: 5% auto;
 }
+
 .fancy {
     line-height: 0.5;
     text-align: center;
     color: #999999;
 }
+
 .fancy span {
     display: inline-block;
     position: relative;
 }
+
 .fancy span:before,
 .fancy span:after {
     content: "";
@@ -44,10 +47,12 @@
     top: 0;
     width: 30px;
 }
+
 .fancy span:before {
     right: 100%;
     margin-right: 15px;
 }
+
 .fancy span:after {
     left: 100%;
     margin-left: 15px;
@@ -58,7 +63,8 @@
 }
 
 .registration-SingIn-button {
-    padding: 0 35px 20px;
+    padding: 0 35px 35px;
+    border-radius: 0px;
 }
 
 .registration_form-SingIn-button {
@@ -77,18 +83,24 @@
     color: #464547;
 }
 
-.greenColor {
+.valid-input {
     border: solid 2px #7F993A;
     color: #7F993A;
 }
 
-.redColorText {
+.error-message {
     color: #8E244D;
     padding: 0px;
     margin:0
 }
 
-.redColor {
+.succsess-message {
+    color: #7F993A;
+    padding: 0px;
+    margin:0
+}
+
+.invalid-input {
     border: solid 2px #8E244D;
     color: #8E244D;
 }
@@ -99,4 +111,9 @@
 
 .form-group.form-width {
     height: 40px;
+}
+
+.focused.focused.focused {
+    border: solid 1px grey !important;
+    color: grey !important;
 }

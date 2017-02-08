@@ -1,19 +1,16 @@
 import angular from 'angular';
 
-import textOnly from './text-only.directive.js';
-import email from './email.directive.js';
-import phone from './phone.directive.js';
-import password from './password.directive.js';
-import confirmPassword from './confirmPassword.directive.js';
+import textOnly from './text-only.directive';
+import email from './email.directive';
+import phone from './phone.directive';
+import password from './password.directive';
 
-
-let ValidatorModule = angular
+const ValidatorModule = angular
     .module('fromValidations', [])
-    .directive('textOnly', () => new  textOnly)
-    .directive('email', () => new  email)
-    .directive('phone', () => new  phone)
-    .directive('password', () => new  password)
-    .directive('confirmPassword', () => new  confirmPassword)
+    .directive('textOnly', textOnly)
+    .directive('email', email)
+    .directive('phone', phone)
+    .directive('password', password)
     .name;
 
 export default ValidatorModule;

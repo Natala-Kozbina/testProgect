@@ -19,23 +19,21 @@ class LoginService {
     setUser (userFromServer) {
         console.log('userFromServer -> ', userFromServer);
         this.localStorage.setItem('user', JSON.stringify(userFromServer));
-        // this.localStorage.setItem('userName', userFromServer.name);
-        // this.localStorage.setItem('userVisibility', userFromServer.userVisibility);
     }
 
     getUser () {
-        let parse = this.localStorage.getItem('user')
+        let parse = JSON.parse(this.localStorage.getItem('user'));
         console.log('parse -> ', parse);
+        return JSON.parse(this.localStorage.getItem('user'));
     }
 
     getVisibility () {
         const userVisibility = this.getUser();
-        console.log('userVisibility -> ', userVisibility);
-        return this.visibility;
+        return userVisibility.visibility;
     }
 
     removeUser () {
-        let user = {};
+        let user = null;
         this.localStorage.setItem('user', user);
     }
 }

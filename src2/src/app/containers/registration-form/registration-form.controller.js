@@ -11,6 +11,7 @@ class RegistrationFormController {
         this.user = {
             'email' : ngModel.email,
             'password' : ngModel.password,
+            'confirmPassword' : ngModel.confirmPassword,
             'name' : ngModel.name,
             'surname' : ngModel.surname,
             'phone' : ngModel.phone
@@ -39,6 +40,31 @@ class RegistrationFormController {
     }
     checkData () {
         return this.errorRegistration = false;
+    }
+
+    checkPassword (ctrl) {
+    ctrl.uppercase = !!ctrl.password.match(/[A-Z]/g);
+    ctrl.lovercase = !!ctrl.password.match(/[a-z]/g);
+    ctrl.number = !!ctrl.password.match(/[0-9]/g);
+    ctrl.length = ctrl.password.length > 7;
+    ctrl.passwordCheck = (ctrl.uppercase && ctrl.lovercase && ctrl.number && ctrl.length);
+    }
+
+    focusData (input, state) {
+        switch(input) {
+            case 'focusEmail': this.focusEmail = state;
+             break;
+            case 'focusName': this.focusName = state;
+             break;
+            case 'focusPassword': this.focusPassword = state;
+             break;
+            case 'focusConfirmPassword': this.focusConfirmPassword = state;
+             break;
+            case 'focusSurname': this.focusSurname = state;
+             break;
+            case 'focusPhone': this.focusPhone = state;
+             break;
+        }
     }
 }
 

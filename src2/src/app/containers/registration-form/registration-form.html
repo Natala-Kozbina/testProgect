@@ -1,6 +1,6 @@
 <div class="registration-form">
     <h1 class="registration-page-title fancy">
-        <span> Sign Up  </span>
+        <span> Sing up  </span>
     </h1>
 
     <div name="form"  class="registration_form-form" ng-submit=$ctrl.checkRegistration($ctrl)>
@@ -8,96 +8,142 @@
             <div class="form-group form-width">
                 <input name="email"
                     ng-model="$ctrl.email"
-                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                    ng-class="{'greenColor': form.email.$valid, 'redColor': form.email.$invalid && form.email.$dirty}"
+                    ng-model-options="{'updateOn': 'blur'}"
+                    ng-class="{'focused': $ctrl.focusEmail, 'valid-input': form.email.$valid, 'invalid-input': form.email.$invalid && form.email.$dirty}"
                     placeholder="user_name@epam.com"
                     class="registration-form-input"
+                    ng-focus="$ctrl.focusData('focusEmail', true)"
+                    ng-blur="$ctrl.focusData('focusEmail', false)"
                     ng-change="$ctrl.checkData()"
                     email
                     required autofocus />
-                    <p class="redColorText" ng-show="!form.email.$valid && form.email.$dirty && form.email.$viewValue.length">This email is not valid</p>
-                    <p class="redColorText" ng-show="!form.email.$viewValue.length && form.email.$dirty">Please supply your email</p>
+                    <p class="error-message" ng-show="!form.email.$valid && form.email.$dirty && form.email.$viewValue.length && !$ctrl.focusEmail">Электронный адрес введен не верно</p>
+                    <p class="error-message" ng-show="!form.email.$viewValue.length && form.email.$dirty && !$ctrl.focusEmail">Пожалуйста, введите Ваш электронный адрес</p>
             </div>
             <div class="form-group form-width">
                 <input name="password"
                     ng-model="$ctrl.password"
                     ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                    ng-class="{'greenColor': form.password.$valid, 'redColor': form.password.$invalid && form.password.$dirty}"
+                    ng-class="{'focused': $ctrl.focusPassword,
+                        'valid-input': ($ctrl.uppercase && $ctrl.lovercase && $ctrl.number && $ctrl.length ),
+                        'invalid-input': !$ctrl.passwordCheck  && form.password.$dirty}"
                     placeholder="........"
                     class="registration-form-input"
                     type="password"
-                    password
+                    ng-focus="$ctrl.focusData('focusPassword', true)"
+                    ng-blur="$ctrl.focusData('focusPassword', false)"
+                    ng-change="$ctrl.checkPassword($ctrl)"
                     required />
-                    <p class="redColorText" ng-show="!form.password.$valid && form.password.$dirty && form.password.$viewValue.length">This password is not valid</p>
-                    <p class="redColorText" ng-show="!form.password.$viewValue.length && form.password.$dirty">Please supply your password</p>
+
+                    <p class="error-message" ng-show="!form.password.$viewValue.length && form.password.$dirty && !$ctrl.focusPassword">Пожалуйста, введите Ваш пароль</p>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && $ctrl.focusPassword && !$ctrl.passwordCheck"
+                        ng-class="{'succsess-message': $ctrl.uppercase && form.password.$dirty}">
+                        заглавная буква  |  </span>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && $ctrl.focusPassword && !$ctrl.passwordCheck"
+                        ng-class="{'succsess-message': $ctrl.lovercase && form.password.$dirty}">
+                        прописная буква  |  </span>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && $ctrl.focusPassword && !$ctrl.passwordCheck "
+                        ng-class="{'succsess-message': $ctrl.number && form.password.$dirty}">
+                        число  |  </span>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && $ctrl.focusPassword && !$ctrl.passwordCheck"
+                        ng-class="{'succsess-message': $ctrl.length && form.password.$dirty}">
+                        мин. длина</span>
+
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && !$ctrl.focusPassword && !$ctrl.passwordCheck "
+                        ng-class="{'error-message': !$ctrl.uppercase && form.password.$dirty, 'succsess-message': $ctrl.uppercase && form.password.$dirty}">
+                        заглавная буква  |  </span>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && !$ctrl.focusPassword && !$ctrl.passwordCheck"
+                        ng-class="{'error-message': !$ctrl.lovercase && form.password.$dirty, 'succsess-message': $ctrl.lovercase && form.password.$dirty}">
+                        прописная буква  |  </span>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && !$ctrl.focusPassword && !$ctrl.passwordCheck"
+                        ng-class="{'error-message': !$ctrl.number && form.password.$dirty, 'succsess-message': $ctrl.number && form.password.$dirty}">
+                        число  |  </span>
+                    <span ng-if="form.password.$dirty && form.password.$viewValue.length && !$ctrl.focusPassword && !$ctrl.passwordCheck"
+                        ng-class="{'error-message': !$ctrl.length && form.password.$dirty, 'succsess-message': $ctrl.length && form.password.$dirty}">
+                        мин. длина</span>
+
+
             </div>
             <div class="form-group form-width">
                 <input name="confirmPassword"
-                ng-model="$ctrl.confirmPassword"
-                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.confirmPassword.$valid, 'redColor': form.confirmPassword.$invalid && form.confirmPassword.$dirty}"
-                placeholder="confirm password"
-                class="registration-form-input"
-                first-password="$ctrl.password"
-                type="password"
-                confirm-password
-                required />
-                <p class="redColorText" ng-show="form.confirmPassword.$dirty && !$ctrl.checkConfirmPassword($ctrl) && form.confirmPassword.$viewValue.length">This password is not valid</p>
-                <p class="redColorText" ng-show="!form.confirmPassword.$viewValue.length && form.confirmPassword.$dirty">Please supply your password</p>
+                    ng-model="$ctrl.confirmPassword"
+                    ng-model-options="{'updateOn': 'blur'}"
+                    ng-class="{'focused': $ctrl.focusConfirmPassword,
+                        'valid-input': ($ctrl.uppercase && $ctrl.lovercase && $ctrl.number && $ctrl.length ) && (form.password.$viewValue === form.confirmPassword.$viewValue),
+                        'invalid-input': (form.password.$viewValue !== form.confirmPassword.$viewValue) && form.confirmPassword.$dirty}"
+                        placeholder="Подтверждение пароля"
+                        class="registration-form-input"
+                        first-password="$ctrl.password"
+                        ng-focus="$ctrl.focusData('focusConfirmPassword', true)"
+                        ng-blur="$ctrl.focusData('focusConfirmPassword', false)"
+                        type="password"
+                        required />
+                        <p class="error-message" ng-show="form.confirmPassword.$dirty && !$ctrl.checkConfirmPassword($ctrl) && form.confirmPassword.$viewValue.length && !$ctrl.focusConfirmPassword">Пароли не совпадают</p>
+                        <p class="error-message" ng-show="!form.confirmPassword.$viewValue.length && form.confirmPassword.$dirty && !$ctrl.focusConfirmPassword">Пожалуйста, подтвердите пароль</p>
             </div>
             <div class="form-group form-width">
                 <input name="name"
                     ng-model="$ctrl.name"
-                    min-length="2"
-                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                    ng-class="{'greenColor': form.name.$valid, 'redColor': form.name.$invalid && form.name.$dirty}"
-                    placeholder="имя"
+                    ng-model-options="{'updateOn': 'blur'}"
+                    ng-class="{'focused': $ctrl.focusName, 'valid-input': form.name.$valid, 'invalid-input': form.name.$invalid && form.name.$dirty}"
+                    placeholder="Имя"
                     class="registration-form-input"
+                    ng-focus="$ctrl.focusData('focusName', true)"
+                    ng-blur="$ctrl.focusData('focusName', false)"
                     text-only
                     required />
-                    <span  class="redColorText" ng-show="!form.name.$valid && form.name.$dirty && form.name.$viewValue.length">This name is not valid</span>
-                    <span  class="redColorText" ng-show="!form.name.$viewValue.length && form.name.$dirty">Please supply your name</span>
+                    <span  class="error-message" ng-show="!form.name.$valid && form.name.$dirty && form.name.$viewValue.length  && !$ctrl.focusName">Имя введено не верно</span>
+                    <span  class="error-message" ng-show="!form.name.$viewValue.length && form.name.$dirty  && !$ctrl.focusName">Пожалуйста, введите Ваше имя</span>
             </div>
             <div class="form-group form-width">
                 <input name="surname"
                     ng-model="$ctrl.surname"
                     min-length="2"
-                    ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                    ng-class="{'greenColor': form.surname.$valid, 'redColor': form.surname.$invalid && form.surname.$dirty}"
-                    placeholder="фамилия"
+                    ng-model-options="{'updateOn': 'blur'}"
+                    ng-class="{'focused': $ctrl.focusSurname, 'valid-input': form.surname.$valid, 'invalid-input': form.surname.$invalid && form.surname.$dirty}"
+                    placeholder="Фамилия"
                     class="registration-form-input"
+                    ng-focus="$ctrl.focusData('focusSurname', true)"
+                    ng-blur="$ctrl.focusData('focusSurname', false)"
                     text-only
                     required />
-                     <span class="redColorText" ng-show="!form.surname.$valid && form.surname.$dirty && form.surname.$viewValue.length">This surname is not valid</span>
-                     <span class="redColorText" ng-show="!form.surname.$viewValue.length && form.surname.$dirty">Please supply your surname</span>
+                     <span class="error-message" ng-show="!form.surname.$valid && form.surname.$dirty && form.surname.$viewValue.length  && !$ctrl.focusSurname">Эта фамилия введена не верно</span>
+                     <span class="error-message" ng-show="!form.surname.$viewValue.length && form.surname.$dirty  && !$ctrl.focusSurname">Пожалуйста, введите Вашу фамилию</span>
             </div>
             <div class="form-group form-width">
             <input name="phone"
                 ng-model="$ctrl.phone"
                 placeholder="+38088-888-88-88"
-                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 300, 'blur': 0}}"
-                ng-class="{'greenColor': form.phone.$valid, 'redColor': form.phone.$invalid && form.phone.$dirty}"
+                ng-model-options="{'updateOn': 'default blur', 'debounce': {'default': 600, 'blur': 0}}"
+                ng-class="{'focused': $ctrl.focusPhone, 'valid-input': form.phone.$valid, 'invalid-input': form.phone.$invalid && form.phone.$dirty}"
                 class="registration-form-input"
+                ng-focus="$ctrl.focusData('focusPhone', true)"
+                ng-blur="$ctrl.focusData('focusPhone', false)"
                 phone
                 required />
-                <span class="redColorText" ng-show="!form.phone.$valid && form.phone.$dirty && form.phone.$viewValue.length">This phone is not valid</span>
-                <span class="redColorText" ng-show="!form.phone.$viewValue.length && form.phone.$dirty">Please supply your phone</span>
+                <span class="error-message" ng-show="!form.phone.$valid && form.phone.$dirty && form.phone.$viewValue.length && !$ctrl.focusPhone">Номер телефона введен не верно. (+38088-888-88-88)</span>
+                <span class="error-message" ng-show="!form.phone.$viewValue.length && form.phone.$dirty && !$ctrl.focusPhone">Пожалуйста, введите Ваш номер телефона</span>
             </div>
 
             <div class="registration_form-button-wrapper">
-                <button type="submit" class="btn registration_form-button-wrapper uui-button large lime-green" ng-disabled="!form.$valid"> Create account </button>
+                <button type="submit"
+                    class="btn registration_form-button-wrapper uui-button large lime-green"
+                    ng-disabled="!form.$valid || (form.password.$viewValue != form.confirmPassword.$viewValue) || !$ctrl.passwordCheck">
+                    Создать аккаунт
+                </button>
             </div>
-            <span class="redColorText" ng-if=$ctrl.errorRegistration>This user has already been registered, please try again.</span>
+            <span class="error-message" ng-if=$ctrl.errorRegistration>Этот Пользователь уже зарегистрирован.</span>
         </form>
     </div>
 
     <p class="registration-page-title fancy">
-        <span> or </span>
+        <span> или </span>
     </p>
 
     <div class="epam-login registration-SingIn-button" >
         <button class="uui-button dark-gray registration_form-SingIn-button" ng-click=$ctrl.redirect()>
-            Sign in
+            Войти
         </button>
     </div>
+
 </div>

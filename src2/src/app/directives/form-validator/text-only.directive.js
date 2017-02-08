@@ -1,20 +1,17 @@
-class TextOnly {
-    constructor() {
-        this.restrict = 'A';
-        this.require = 'ngModel';
-    }
+const TextOnly = (CONSTS) => ({
+    restrict: 'A',
+    require: 'ngModel',
     link($scope, $element, $attrs, $ctrl) {
 
-        $ctrl.$validators.textOnly = function(modelValue) {
-            var length = $attrs.minLength;
-            var reg = new RegExp("^[A-ZА-Яa-zа-я][a-zа-я]{" + length + ",}$");
-            if (reg.test(modelValue)) {
-                return true;
-            } else {
-                return false;
-            }
+        $ctrl.$validators.textOnly = modelValue => {
+            let minLength = CONSTS.INPUT.MINLENGTH;
+            let maxLength = CONSTS.INPUT.MAXLENGTH;
+            let reg = new RegExp("^[A-ZА-Яa-zа-я][A-ZА-Яa-zа-я ']{" + minLength + "," + maxLength + "}$");
+            return !!reg.test(modelValue)
         };
     }
-}
+})
+
+TextOnly.$inject = ['CONSTS'];
 
 export default TextOnly;

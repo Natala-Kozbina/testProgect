@@ -5,6 +5,7 @@ class LoginFormController {
         this.loginService = loginService;
         this.$log = $log;
         this.user = {};
+
     }
 
     $onInit() {
