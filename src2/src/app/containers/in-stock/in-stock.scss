@@ -1,8 +1,7 @@
-.b-balance {
-  &__amount {
-    color: #fff;
+.in-stock {
+  &__wrapper {
+      text-align: center;
+      display: inline-block;
   }
-  &__title {
-    color: #e25454;
-  }
+
 }

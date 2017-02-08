@@ -27,9 +27,6 @@ class LocalStorageService {
     removeUser () {
         this.localStorage.setItem('user', null);
     }
-
-
-
 }
 
 export default LocalStorageService;

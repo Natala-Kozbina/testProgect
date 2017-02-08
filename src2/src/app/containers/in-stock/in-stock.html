@@ -1,2 +1,12 @@
-<span class="b-balance__title">Баланс: </span>
-<span class="b-balance__amount">{{$ctrl.balance}} грн</span>
+<div class="in-stock__wrapper">
+        <p class="large  accordion__checked">
+            <input
+                class="accordion__switch"
+                ng-model="$ctrl.inStock"
+                ng-click="$ctrl.choseInStockOnly()"
+                ng-class="{checked: $ctrl.inStock}"
+                type="checkbox">
+            </input>
+        </p>
+    <div class="accordion__datapicker-checkbox">In stock only</div>
+</div>

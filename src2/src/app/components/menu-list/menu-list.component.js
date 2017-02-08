@@ -4,7 +4,8 @@ import './menu-list.scss';
 
 let menuListComponent = {
     bindings: {
-      supplier:'<'
+      supplier:'<',
+      showDish:'<'
     },
     template,
     controller

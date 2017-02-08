@@ -19,7 +19,7 @@
                     <input
                         class="accordion__switch"
                         ng-model="$ctrl.checkboxModel"
-                        ng-click="$ctrl.choseInStockOnly()"
+                        ng-click="$ctrl.choseInStockOnly($ctrl.checkboxModel)"
                         type="checkbox">
                     </input>
                 </p>
@@ -28,7 +28,7 @@
     </div>
 
     <div  class="panel-default container" heading="{{item.name}}" ng-repeat="item in $ctrl.items" template-url="templ">
-        <menu-list supplier="item">
+        <menu-list supplier="item" show-dish="$ctrl.needStock">
         </menu-list>
     </div>
 </div>

@@ -2,10 +2,12 @@ import './in-stock.scss';
 import controller from './in-stock.controller';
 import template from './in-stock.html';
 
-const BalanceComponent = {
-    bindings: {},
+const inStockComponent = {
+    bindings: {
+            inStock: "="
+    },
     template,
     controller
 };
 
-export default BalanceComponent;
+export default inStockComponent;

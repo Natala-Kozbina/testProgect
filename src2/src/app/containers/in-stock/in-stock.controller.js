@@ -1,9 +1,10 @@
-class BalanceController {
+class inStockController {
     constructor() {}
 
     $onInit() {
-        this.balance = 300;
+        this.inStock;
+        console.log(this.inStock);
     }
 }
 
-export default BalanceController;
+export default inStockController;

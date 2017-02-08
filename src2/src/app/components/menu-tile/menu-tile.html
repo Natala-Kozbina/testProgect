@@ -1,26 +1,39 @@
 <div class="menu-tile">
-  <div class="menu-tile-dish" ng-show="$ctrl.displayDish">
+    <div class="menu-tile-dish" ng-show="$ctrl.displayDish">
 
-    <menu-tile-label label-type="$ctrl.dishData.labelType" dish-data="$ctrl.dishData"></menu-tile-label>
-    <div class="menu-tile-dish__image">
-        <img src="../../assets/img/menu/dish-image-example.png" alt="" />
-    </div>
-    <div class="menu-tile-dish__infoDish">
-        <div class="menu-tile-dish__name">
-            Name: {{$ctrl.dishData.name}}
+        <menu-tile-label
+            label-type="$ctrl.dishData.labelType"
+            dish-data="$ctrl.dishData">
+        </menu-tile-label>
+        <div class="menu-tile-dish__image">
+            <img src="../../assets/img/menu/dish-image-example.png" alt="" />
         </div>
-        <div class="menu-tile-dish__name">
-            Color: {{$ctrl.dishData.color}}
-        </div>
-        <div class="menu-tile-dish__bottom clearfix">
-            <div class="menu-tile-price">
-                Price: {{$ctrl.dishData.price | currency}}
+        <div class="menu-tile-dish__wrapper-infoDish">
+            <div class="menu-tile-dish__infoDish">
+                <div class="menu-tile-dish__name">
+                    Name: {{$ctrl.dishData.name}}
+                </div>
+                <div class="menu-tile-dish__name">
+                    Color: {{$ctrl.dishData.color}}
+                </div>
             </div>
-            <div class="menu-tile-amount">
-                <input type="number" class="menu-tile-amount__input" min="0" step="1" />
+            <div class="menu-tile-dish__infoDish">
+                <div class="menu-tile-dish__name">
+                    Issue date
+                </div>
+                <div class="menu-tile-dish__name">
+                    <in-stock in-stock = $ctrl.dishData.inStock></in-stock>
+                </div>
             </div>
-            <div class="menu-tile-order">
-                <button class="menu-tile-order__btn uui-button blue">Order</div>
+            <div class="menu-tile-dish__infoDish clearfix">
+                <div class="menu-tile-price">
+                    Price: {{$ctrl.dishData.price | currency}}
+                </div>
+                <div class="menu-tile-amount">
+                    <input type="number" class="menu-tile-amount__input" min="0" step="1" />
+                </div>
+                <div class="menu-tile-order">
+                    <button class="menu-tile-order__btn">Order</button>
                 </div>
             </div>
         </div>

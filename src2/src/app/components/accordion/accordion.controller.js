@@ -4,10 +4,12 @@ class AccordionController {
         this.items = null;
         this.supplierService = supplierService;
         this.loginService = loginService;
+        this.showDish = true;
     }
 
     $onInit() {
         this.menuShowed = false;
+        this.showDish = true;
         this.items = this.supplierService.getSuppliers();
         this.visibility = this.loginService.getVisibility();
     }
@@ -16,9 +18,11 @@ class AccordionController {
         this.menuShowed = !this.menuShowed;
     }
 
-    choseInStockOnly () {
-        let inStockOnly = this.checkboxModel;
+    choseInStockOnly (inStockOnly) {
         console.log('inStockOnly -> ', inStockOnly);
+        this.showDish = !this.showDish;
+        this.needStock = inStockOnly;
+        this.supplierService.selectInStock(inStockOnly);
     }
 
 }

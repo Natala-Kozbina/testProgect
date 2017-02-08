@@ -73,6 +73,14 @@ class SupplierService {
         return this.suppliers;
     }
 
+    selectInStock (inStockOnly) {
+        this.select = inStockOnly;
+    }
+
+    getSelectDish () {
+        return this.select;
+    }
+
 }
 
 export default SupplierService;
