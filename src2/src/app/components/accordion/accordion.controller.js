@@ -4,14 +4,18 @@ class AccordionController {
         this.items = null;
         this.supplierService = supplierService;
         this.loginService = loginService;
-        this.showDish = true;
     }
 
     $onInit() {
         this.menuShowed = false;
-        this.showDish = true;
+        this.checkboxModel = false;
+        this.showDish = this.checkboxModel;
         this.items = this.supplierService.getSuppliers();
         this.visibility = this.loginService.getVisibility();
+        this.menuTitle = "Chose Color";
+        this.menuList = [
+            {title: 'hhjh'},
+            {title: 'bbb'}];
     }
 
     toggleMenu () {
@@ -19,12 +23,8 @@ class AccordionController {
     }
 
     choseInStockOnly (inStockOnly) {
-        console.log('inStockOnly -> ', inStockOnly);
-        this.showDish = !this.showDish;
-        this.needStock = inStockOnly;
-        this.supplierService.selectInStock(inStockOnly);
+        this.showDish = inStockOnly;
     }
-
 }
 
 export default AccordionController;

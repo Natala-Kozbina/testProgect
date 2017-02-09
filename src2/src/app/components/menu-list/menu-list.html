@@ -1,5 +1,5 @@
 <div class="menu-list container-fluid">
   <div class="container-fluid" ng-repeat="dishData in $ctrl.supplier.data">
-    <menu-tile dish-data="dishData" ng-if="$ctrl.showDish === dishData.inStock"></menu-tile>
+    <menu-tile dish-data="dishData" ng-if="!$ctrl.showDish || $ctrl.showDish === dishData.inStock"></menu-tile>
   </div>
 </div>

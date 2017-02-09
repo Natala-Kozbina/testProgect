@@ -1,6 +1,6 @@
 class MenuListController {
     constructor() {
-        "ngInject";        
+        "ngInject";
     }
 }
 

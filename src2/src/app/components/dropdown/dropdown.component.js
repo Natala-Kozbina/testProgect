@@ -5,8 +5,7 @@ import template from './dropdown.html';
 
 const DropdownComponent = {
     bindings: {
-        photo: '<',
-        menuTitle: '@',
+        menuTitle: '<',
         menuList: '<'
     },
     controller,
