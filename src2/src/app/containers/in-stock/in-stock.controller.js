@@ -3,7 +3,6 @@ class inStockController {
 
     $onInit() {
         this.inStock;
-        console.log(this.inStock);
     }
 }
 

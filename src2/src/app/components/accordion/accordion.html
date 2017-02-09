@@ -26,13 +26,24 @@
                 </p>
             <div class="accordion__datapicker-checkbox">In stock only</div>
         </div>
-    </div>
-    <div  class="panel-default container">
-        <dropdown menu-title="$ctrl.menuTitle" menu-list="$ctrl.menuList"></dropdown>
+        <div  class="panel-default container">
+            <dropdown
+                menu-title="$ctrl.menuTitle"
+                menu-list="$ctrl.menuList"
+                menu-list-obj="$ctrl.menuListObj"
+                need-color="$ctrl.needColor"
+                select-color="$ctrl.selectColor">
+            </dropdown>
+        </div>
     </div>
 
+
     <div  class="panel-default container" heading="{{item.name}}" ng-repeat="item in $ctrl.items" template-url="templ">
-        <menu-list supplier="item" show-dish="$ctrl.showDish">
+        <menu-list
+            supplier="item"
+            show-dish="$ctrl.showDish"
+            need-color="$ctrl.needColor"
+            select-color="$ctrl.selectColor" >
         </menu-list>
     </div>
 </div>

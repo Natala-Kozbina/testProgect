@@ -9,7 +9,7 @@ class SupplierService {
                         likes: "25",
                         labelType: "likes",
                         id: 1,
-                        color: "red",
+                        color: "Red",
                         inStock: true,
                         date: "02/10/2017",
                         comments: [{
@@ -25,7 +25,7 @@ class SupplierService {
                         likes: "25",
                         labelType: "likes",
                         id: 2,
-                        color: "white",
+                        color: "White",
                         inStock: true,
                         date: "02/10/2017",
                         comments: [
@@ -49,7 +49,7 @@ class SupplierService {
                         likes: "25",
                         labelType: "likes",
                         id: 3,
-                        color: "yellow",
+                        color: "Yellow",
                         inStock: true,
                         date: "02/10/2017",
                         comments: []
@@ -60,7 +60,7 @@ class SupplierService {
                         likes: "25",
                         labelType: "likes",
                         id: 4,
-                        color: "green",
+                        color: "Green",
                         inStock: false,
                         date: "02/10/2017",
                         comments: []

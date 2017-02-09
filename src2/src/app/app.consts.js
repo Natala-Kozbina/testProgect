@@ -20,15 +20,24 @@
     const USER = {
         "name": "Natala",
         "password": "xxx",
-        
         "surname": "Admin",
         "email": "www@www.www",
         "phone": "+38088-888-88-88",
         "visibility": true
     };
 
+    const COLOR = {colors: [
+        {color: 'Red'},
+        {color: 'White'},
+        {color: 'Black'},
+        {color: 'Blue'},
+        {color: 'Yellow'},
+        {color: 'Green'}
+    ]}
+
 module.exports = {
     URLS,
     INPUT,
-    USER
+    USER,
+    COLOR
 };

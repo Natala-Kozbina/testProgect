@@ -5,7 +5,9 @@ import './menu-list.scss';
 let menuListComponent = {
     bindings: {
       supplier:'<',
-      showDish:'<'
+      showDish:'<',
+      needColor: '=',
+      selectColor: '='
     },
     template,
     controller

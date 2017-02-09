@@ -9,7 +9,6 @@ class DatepickerController {
         this.closeOnDateSelection = true;
     }
     open() {
-        console.log('open');
         this.opened = true;
     }
 }

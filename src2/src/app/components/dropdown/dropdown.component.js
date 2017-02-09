@@ -6,7 +6,9 @@ import template from './dropdown.html';
 const DropdownComponent = {
     bindings: {
         menuTitle: '<',
-        menuList: '<'
+        menuListObj: '<',
+        needColor: '=',
+        selectColor : '='
     },
     controller,
     template

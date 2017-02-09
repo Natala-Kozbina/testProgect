@@ -1,9 +1,12 @@
 class AccordionController {
-    constructor(supplierService, loginService) {
+    constructor(supplierService, loginService, CONSTS) {
         "ngInject";
         this.items = null;
         this.supplierService = supplierService;
         this.loginService = loginService;
+        this.consts = CONSTS;
+        this.needColor = true;
+        this.selectColor = true;
     }
 
     $onInit() {
@@ -12,10 +15,8 @@ class AccordionController {
         this.showDish = this.checkboxModel;
         this.items = this.supplierService.getSuppliers();
         this.visibility = this.loginService.getVisibility();
-        this.menuTitle = "Chose Color";
-        this.menuList = [
-            {title: 'hhjh'},
-            {title: 'bbb'}];
+        this.menuTitle = "Choose Color";
+        this.menuListObj = this.consts.COLOR.colors;
     }
 
     toggleMenu () {
